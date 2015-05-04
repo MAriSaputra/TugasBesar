@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class AdminKelas {
+	
 	IdentitasRuangKelas dataIdentitas = new IdentitasRuangKelas();
 	KondisiRuangKelas dataKondisi = new KondisiRuangKelas();
 	JumlahKondisidanPosisiSarana dataSarana = new JumlahKondisidanPosisiSarana();
@@ -45,39 +46,8 @@ public class AdminKelas {
 	        System.out.println("Masukkan jumlah jendela dalam ruangan : ");
 	        dataKondisi.setJumlahJendela(scan.nextInt());
 	}
-	void AnalysisKondisiRuangKelas(){
-			if (dataKondisi.getPanjangRuang() < dataKondisi.getLebarRuang()){
-	          System.out.println("Angka yang Anda masukkan Salah");
-	      } 
-	      
-			else if (dataKondisi.getPanjangRuang() == dataKondisi.getLebarRuang()){
-	        System.out.println("Tidak ada ruangan yang berbentuk persegi panjang");
-	      }
-	      
-			if (dataKondisi.RasioLuas() >= 0.5){
-	          System.out.println(" Ruangan kelas telah memenuhi Standard ");
-	      }
-	      
-			else if (dataKondisi.RasioLuas() <= 0.5){
-	          System.out.println(" Ruang kelas tidak memenuhi Standard ");
-	      }
-	      
-			if (dataKondisi.getJumlahPintu() >= 2){
-	          System.out.println(" Jumlah pintu telah memenuhi Standard ");
-	      }
-	          
-			else if(dataKondisi.getJumlahPintu() <= 2){
-	          System.out.println(" Jumlah pintu tidak memenuhi Standard ");
-	      }
-	      
-			if (dataKondisi.getJumlahJendela() >= 1){
-	          System.out.println(" Jumlah Jendela sesuai ");
-	      }
-	      
-			else if (dataKondisi.getJumlahJendela() == 0){
-	          System.out.println(" Jumlah Jendela tidak memenuhi Standard ");
-			}
-		}
+	
+	
 	void PrintKondisiRuangKelas(){
 		 System.out.println("== Kondisi Ruang Kelas ==");
 		 System.out.println("Jumlah kursi didalam kelas : " + dataKondisi.getJumlahKursi());
@@ -153,183 +123,7 @@ public class AdminKelas {
 	        dataSarana.setPosisi_CCTV(scan.nextLine());       
 	}
 
-	void AnalysisJumlahKondisidanPosisiSarana(){
-			String KondisiStopKontak = "Berfungsi dengan baik";
-	        String PosisiStopKontak1 = "Di pojokkan ruangan";
-	        String PosisiStopKontak2 = "Dekat dosen";
-	        String KondisiKabel_LCD = "Berfungsi dengan baik";
-	        String PosisiKabel_LCD = "Dekat dosen";
-	        String KondisiLampu= "Berfungsi dengan baik";
-	        String PosisiLampu = "Diatap ruangan";
-	        String KondisiKipasAngin = "Berfungsi dengan baik";
-	        String PosisiKipasAngin = "Di atap ruangan";
-	      	String Kondisi_AC = "Berfungsi dengan baik";
-	        String Posisi_AC1= "Di belakang";
-	        String Posisi_AC2= "Di samping";
-	      	String SSID = "UMM Hotspot";
-	      	String Login = "Bisa Login";
-	      	String Kondisi_CCTV = "Berfungsi dengan baik";
-	        String Posisi_CCTV1 = "Di depan";
-	        String Posisi_CCTV2 = "Di belakang";
 	
-	        if(dataSarana.getJumlahStopKontak() >= 4){
-	            System.out.println("Sudah Sesuai Standard");
-	        }
-	        
-	        else{
-	        	System.out.println("Belum Sesuai Standard");
-	        }
-	        
-	       if(KondisiStopKontak.equals(dataSarana.getKondisiStopKontak())){
-	              System.out.println(" Sudah Sesuai Standard ");
-	            }
-	                
-	       else {
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	       	if(PosisiStopKontak1.equals(dataSarana.getPosisiStopKontak())){
-	           if(PosisiStopKontak2.equals(dataSarana.getPosisiStopKontak())){
-	               System.out.println(" Sudah Sesuai Standard ");
-	           }
-	       }
-	       
-	       else {
-	            System.out.println("Belum sesuai Standard ");
-	       
-	        }
-	       if(dataSarana.getJumlahKabel_LCD() >= 1 ){
-	            System.out.println("Sudah Sesuai Standard ");
-	        }
-	        
-	       else {
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	       if(KondisiKabel_LCD.equals(dataSarana.getKondisiKabel_LCD())){
-	             System.out.println("Sudah Sesuai Standard ");
-	        }
-	        
-	       else{
-	             System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	       if(PosisiKabel_LCD.equals(dataSarana.getPosisiKabel_LCD())){
-	             System.out.println("Sudah Sesuai Standard ");
-	        }
-	        
-	       else{
-	             System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	       if(dataSarana.getJumlahLampu() >= 18){
-	            if(KondisiLampu.equals(dataSarana.getKondisiLampu())){
-	                System.out.println("Sesuai Standard ");
-	             }
-	        }
-	        
-	       else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	       
-	        
-	        if(PosisiLampu.equals(dataSarana.getPosisiLampu())){
-	            System.out.println("Sudah Sesuai Standard ");
-	        }
-	        
-	        else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	        if(dataSarana.getJumlahKipasAngin()>=2){
-	            if(KondisiKipasAngin.equals(dataSarana.getKondisiKipasAngin())){
-	                System.out.println("Sudah Sesuai Standard ");
-	            }
-	        }
-	        
-	        else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	        if(PosisiKipasAngin.equals(dataSarana.getPosisiKipasAngin())){
-	           System.out.println("Sudah Sesuai Standard ");
-	        }
-	        
-	        else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	              
-	        if(dataSarana.getJumlah_AC()>=1){
-	            System.out.println("Sudah Sesuai Standard ");
-	        }
-	       	        
-	        else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	        
-	       if(Kondisi_AC.equals(dataSarana.getKondisi_AC())){
-	             System.out.println("Sudah Sesuai Standard ");
-	       }
-	      	       
-	       else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	       
-	       if(Posisi_AC1.equals(dataSarana.getPosisi_AC())){
-	            System.out.println("Sudah Sesuai Standard ");
-	        }
-	       
-	       if(Posisi_AC2.equals(dataSarana.getPosisi_AC())){
-	            System.out.println("Sudah Sesuai Standard ");
-	        }
-	       
-	       else{
-	            System.out.println("Belum Sesuai Standard ");
-	        }
-	       
-	       if(SSID.equals(dataSarana.getSSID())){
-	           System.out.println("Sudah Sesuai Standard ");
-	       }
-	       
-	       else{
-	            System.out.println("Belum Sesuai Standard ");
-	       }
-	       if(Login.equals(dataSarana.getLogin())){
-	    	   System.out.println("Sudah Sesuai Standard");
-	       }
-	       else{
-	    	   System.out.println("Belum Sesuai Standard");
-	       }
-	       
-	       if(dataSarana.getJumlah_CCTV()== 2){
-	           System.out.println("Sudah Sesuai Standard ");
-	       }
-	       else{
-	    	   System.out.println("Belum Sesuai Standard");
-	       }
-	       
-	       if(Kondisi_CCTV.equals(dataSarana.getKondisi_CCTV())){
-	             System.out.println("Sudah Sesuai Standard ");
-	           }
-	       
-	       else{
-	          System.out.println("Belum Sesuai Standard ");
-	       }
-	       
-	      if(Posisi_CCTV1.equals(dataSarana.getPosisi_CCTV())){
-	    	  System.out.println("Sudah Sesuai Standard");
-	      }
-	      else{
-	    	  System.out.println("Belum Sesuai Standard");
-	      }
-	      if(Posisi_CCTV2.equals(dataSarana.getPosisi_CCTV())){
-	          System.out.println("Sudah Sesuai Standard ");
-	          }
-	      
-	      else{
-	          System.out.println("Belum Sesuai Standard ");
-	  }
-	}
 	      void PrintJumlahKondisidanPosisiSarana(){
 	    	  	System.out.println("== Jumlah,Kondisi dan Posisi Sarana ==");
 	    	  	System.out.println("Jumlah Stop Kontak : " + dataSarana.getJumlahStopKontak());
@@ -375,42 +169,7 @@ public class AdminKelas {
 	       System.out.println("Kondisi Jendela : ");
 	       dataLingkungan.setKondisiJendela(scan.nextLine());
 	   }
-	 void AnalysisLingkunganRuangKelas(){
-	       String KondisiRuangKelas = "Bersih";
-	       
-	       if(KondisiRuangKelas.equals(dataLingkungan.getKondisiLantai())){
-	    	   System.out.println("Sudah Sesuai Standard ");
-	       }
-	    	   else{
-		           System.out.println(" Belum Sesuai Standard ");
-		       } 
-	       if(KondisiRuangKelas.equals(dataLingkungan.getKondisiDinding())){
-	    	   System.out.println("Sudah Sesuai Standard ");
-	       }
-	    	   else{
-		           System.out.println(" Belum Sesuai Standard ");
-		       } 
-	       if(KondisiRuangKelas.equals(dataLingkungan.getKondisiAtap())){
-	    	   System.out.println("Sudah Sesuai Standard ");
-	       }
-	    	   else{
-		           System.out.println("Belum Sesuai Standard");
-		       } 
-	       if(KondisiRuangKelas.equals(dataLingkungan.getKondisiPintu())){
-	    	   System.out.println("Sudah Sesuai Standard");
-	       }
-	    	   else{
-		           System.out.println("Belum Sesuai Standard");
-		       } 
-	       if(KondisiRuangKelas.equals(dataLingkungan.getKondisiJendela())){
-	      
-	       System.out.println("Sudah Sesuai Standard");
-	       }
-	    	   else{
-		           System.out.println("Belum Sesuai Standard");
-		       } 
-	           	   
-	       }
+	 
 	 void PrintLingkunganKelas(){
 		 System.out.println("== Lingkungan Kelas ==");
 		 System.out.println("Kondisi Lantai : " + dataLingkungan.getKondisiLantai());
@@ -434,40 +193,7 @@ public class AdminKelas {
 		 	dataKebersihan.setSuhu(scan.nextInt());
 	   }
 	   
-	 void AnalysisKebersihanRuangKelas(){
-		 String SirkulasiUdara = "Lancar";
-		 
-		 if (SirkulasiUdara.equals(dataKebersihan.getSirkualasiUdara())){
-			 System.out.println("Sirkulasi udara di dalam ruangan sudah sesuai Standard");
-		 }
-		 else{
-			 System.out.println("Sirkulasi udara di dalam ruangan belum sesuai Standard");
-		 }
-
-	       if( dataKebersihan.getNilaiPencahayaan()<=350 == dataKebersihan.getNilaiPencahayaan()>=250){
-	           System.out.println("Nilai pencahayaan ruangan sudah sesuai Standard ");
-	       }
-	       
-	        else{
-	           System.out.println(" Niali pencahayaan ruangan tidak sesuai Standard ");
-	       }
-	       
-	        if( dataKebersihan.getKelembapan()<=80 == dataKebersihan.getKelembapan()>=70){
-	           System.out.println("Kelembapan ruangan sudah sesuai Standard ");
-	       }
-	       
-	        else{
-	           System.out.println("Kelembapan ruangan belum sesuai Standard ");
-	       }
-	        
-	        if( dataKebersihan.getSuhu()<=35 == dataKebersihan.getSuhu()>=25){
-	           System.out.println("Kebersihan ruangan sudah sesuai Standard ");
-	       }
-	       
-	        else {
-	           System.out.println("Kebersihan ruangan belum sesuai Standard ");
-	       }
-	   }
+	
 	 void PrintKebersihanRuangKelas(){
 		 System.out.println("== Kebersihan Ruang Kelas ==");
 		 System.out.println("Sirkulasi Udara : " + dataKebersihan.getSirkualasiUdara());
@@ -492,44 +218,7 @@ public class AdminKelas {
 	     System.out.println("Kondisi keausan di dalam kelas : ");
 	     dataKenyamanan.setKeausan(scan.nextLine());
 	 }
-	 void AnalysisKenyamananRuangKelas(){
-		 String Kebisingan = "Tidak Bising";
-		 String Bau = "Tidak Bau";
-		 String Kebocoran = "Tidak Bocor";
-		 String Kerusakan = "Tidak Rusak";
-		 String Keausan = "Tidak Aus";
-		 
-		 if(Kebisingan.equals(dataKenyamanan.getKebisingan())){
-			 System.out.println("Sudah Sesuai");
-	       }
-	       else{
-	           System.out.println("Belum Sesuai");
-	       }
-		 if(Bau.equals(dataKenyamanan.getBau())){
-			 System.out.println("Sudah Sesuai ");
-		 }
-		 else{
-			 System.out.println("Belum Sesuai ");
-		 }
-		 if(Kebocoran.equals(dataKenyamanan.getKebocoran())){
-			 System.out.println("Sudah Sesuai");
-		 }
-		 else{
-			 System.out.println("Belum Sesuai");
-		 }
-		 if(Kerusakan.equals(dataKenyamanan.getKerusakan())){
-			 System.out.println("Sudah Sesuai");
-		 }
-		 else{
-			 System.out.println("Belum Sesuai");
-		 }
-		 if(Keausan.equals(dataKenyamanan.getKeausan())){
-			 System.out.println("Sudah Sesuai");
-		 }
-		 else{
-			 System.out.println("Belum Sesuai");
-		 }
-	 }
+	
 	 void PrintKenyamanRuangKelas(){
 		 System.out.println("== Kenyamanan Ruang Kelas ==");
 		 System.out.println("Kebisingan : " + dataKenyamanan.getKebisingan());
@@ -552,39 +241,7 @@ public class AdminKelas {
 	        System.out.println("Bahaya dalam kelas : ");
 	        dataKeamanan.setBahaya(scan.nextLine());
 	   }
-	   void AnalysisKeamananRuangKelas(){
-		   String Kekokohan = "Kokoh";
-		   String KunciPintu = "Ada";
-		   String KunciJendela = "Ada";
-		   String Bahaya = "Aman";
 	   
-	   if(Kekokohan.equals(dataKeamanan.getKekokohan())){
-           System.out.println("Sudah Sesuai");
-	   }
-	   else{
-           System.out.println("Belum Sesuai ");
-	   }
-      
-	   if(KunciPintu.equals(dataKeamanan.getKunciPintu())){
-           System.out.println("Sudah Sesuai");
-	   }
-	   else{
-           System.out.println("Belum Sesuai ");
-	   }
-      
-	   if(KunciJendela.equals(dataKeamanan.getKunciJendela())){
-           System.out.println("Sudah Sesuai");
-	   }
-	   else{
-           System.out.println("Tidak Sesuai ");
-	   }
-	   if(Bahaya.equals(dataKeamanan.getBahaya())){
-    	  System.out.println("Sudah Sesuai");
-	   }
-	   else{
-    	  System.out.println("Belum Sesuai");
-	   }
-	   }
 	  void PrintKeamananRuangKelas(){
 		  System.out.println("== Keamanan Ruang Kelas ==");
 		  System.out.println("Kekokohan : " + dataKeamanan.getKekokohan());

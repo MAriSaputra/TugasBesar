@@ -1,14 +1,23 @@
 
 public class TestKelas {
 	public static void main(String[] args) {
-		AdminKelas data = new AdminKelas();
+		AdminKelas user = new AdminKelas();
 		
-		data.AnalysisJumlahKondisidanPosisiSarana();
-		data.AnalysisKeamananRuangKelas();
-		data.AnalysisKebersihanRuangKelas();
-		data.AnalysisKenyamananRuangKelas();
-		data.AnalysisKondisiRuangKelas();
-		data.AnalysisLingkunganRuangKelas();
+		user.InsertIdentitasRuangKelas();
+		user.InsertJumlahKondisidanPosisiSarana();
+		user.InsertKeamananRuangKelas();
+		user.InsertKebersihanRuangKelas();
+		user.InsertKenyamananRuangKelas();
+		user.InsertKondisiRuangKelas();
+		user.InsertLingkunganKelas();
+		
+		user.PrintIdentitasRuangKelas();
+		user.PrintJumlahKondisidanPosisiSarana();
+		user.PrintKeamananRuangKelas();
+		user.PrintKebersihanRuangKelas();
+		user.PrintKenyamanRuangKelas();
+		user.PrintKondisiRuangKelas();
+		user.PrintLingkunganKelas();
 		
 	}
 }
