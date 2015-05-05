@@ -20,6 +20,7 @@ public class AdminKelas {
         
         System.out.println("Masukan Pengguna Program Studi/Fakultas : ");
         dataIdentitas.setProgramStudi_Fakultas(scan.nextLine());
+        
 	}
 
 	void PrintIdentitasRuangKelas(){
@@ -27,6 +28,7 @@ public class AdminKelas {
     System.out.println("Ruang Kelas : " + dataIdentitas.getNamaRuang());
     System.out.println("Gedung : " + dataIdentitas.getLokasiRuang());
     System.out.println("Jurusan : " + dataIdentitas.getProgramStudi_Fakultas());
+    
 	}
 
 	void InsertKondisiRuangKelas(){
@@ -45,17 +47,19 @@ public class AdminKelas {
 	        
 	        System.out.println("Masukkan jumlah jendela dalam ruangan : ");
 	        dataKondisi.setJumlahJendela(scan.nextInt());
+	        
 	}
 	
-	
-	void PrintKondisiRuangKelas(){
+		void PrintKondisiRuangKelas(){
 		 System.out.println("== Kondisi Ruang Kelas ==");
 		 System.out.println("Jumlah kursi didalam kelas : " + dataKondisi.getJumlahKursi());
 	     System.out.println("Jumlah Pintu pada kelas : " + dataKondisi.getJumlahPintu());
 	     System.out.println("Jumlah Jendela pada kelas : " + dataKondisi.getJumlahJendela());
 	     System.out.println("Luas Ruang : " + dataKondisi.LuasRuang());
 	     System.out.println("Rasio Ruang : "+ dataKondisi.RasioLuas());
+	     
 	}
+	
 	void InsertJumlahKondisidanPosisiSarana(){
 		Scanner scan = new Scanner(System.in);
 		
@@ -63,34 +67,34 @@ public class AdminKelas {
 	        dataSarana.setJumlahStopKontak(scan.nextInt());
 	        
 	        System.out.println("Masukkan kondisi stop kontak : ");
-	        dataSarana.setKondisiStopKontak(scan.nextLine());
+	        dataSarana.setKondisiStopKontak(scan.next());
 	        
 	        System.out.println("Masukkan posisi stop kontak :  ");
-	        dataSarana.setPosisiStopKontak(scan.nextLine());
+	        dataSarana.setPosisiStopKontak(scan.next());
 	        
 	        System.out.println("Masukkan jumlah kabel LCD : ");
 	        dataSarana.setJumlahKabel_LCD(scan.nextInt());
 	        
 	        System.out.println("Masukkan kondisi kabel LCD : ");
-	        dataSarana.setKondisiKabel_LCD(scan.nextLine());
+	        dataSarana.setKondisiKabel_LCD(scan.next());
 	        
 	        System.out.println("Masukkan posisi kabel LCD : ");
-	        dataSarana.setPosisiKabel_LCD(scan.nextLine());
+	        dataSarana.setPosisiKabel_LCD(scan.next());
 	        
 	        System.out.println("Masukkan jumlah lampu : ");
 	        dataSarana.setJumlahLampu(scan.nextInt());
 	        
 	        System.out.println("Masukkan kondisi lampu : ");
-	        dataSarana.setKondisiLampu(scan.nextLine());
+	        dataSarana.setKondisiLampu(scan.next());
 	        
 	        System.out.println("Masukkan posisi lampu : ");
-	        dataSarana.setPosisiLampu(scan.nextLine());
+	        dataSarana.setPosisiLampu(scan.next());
 	        
 	        System.out.println("Masukkan SSID : ");
-	        dataSarana.setSSID(scan.nextLine());
+	        dataSarana.setSSID(scan.next());
 	        
 	        System.out.println("Masukkan Login : ");
-	        dataSarana.setLogin(scan.nextLine());
+	        dataSarana.setLogin(scan.next());
 	        
 	       	System.out.println("Masukkan Bandwidth : ");
 	        dataSarana.setBandwidth(scan.nextInt());
@@ -99,28 +103,29 @@ public class AdminKelas {
 	        dataSarana.setJumlahKipasAngin(scan.nextInt());
 	        
 	        System.out.println("Masukkan kondisi kipas angin  : ");
-	        dataSarana.setKondisiKipasAngin(scan.nextLine());
+	        dataSarana.setKondisiKipasAngin(scan.next());
 	        
 	        System.out.println("Masukkan posisi kipas angin : ");
-	        dataSarana.setPosisiKipasAngin(scan.nextLine());
+	        dataSarana.setPosisiKipasAngin(scan.next());
 	        
 	        System.out.println("Masukkan jumlah AC : ");
 	        dataSarana.setJumlah_AC(scan.nextInt());
 	        
 	        System.out.println("Masukkan kondisi AC : ");
-	        dataSarana.setKondisi_AC(scan.nextLine());
+	        dataSarana.setKondisi_AC(scan.next());
 	        
 	        System.out.println("Masukan posisi AC : ");
-	        dataSarana.setPosisi_AC(scan.nextLine());
+	        dataSarana.setPosisi_AC(scan.next());
 	        
 	        System.out.println("Masukkan jumlah CCTV : ");
 	        dataSarana.setJumlah_CCTV(scan.nextInt());
 	        
 	        System.out.println("Masukkan kondisi CCTV : ");
-	        dataSarana.setKondisi_CCTV(scan.nextLine());
+	        dataSarana.setKondisi_CCTV(scan.next());
 	        
 	        System.out.println("Masukkan posisi CCTV : ");
-	        dataSarana.setPosisi_CCTV(scan.nextLine());       
+	        dataSarana.setPosisi_CCTV(scan.next()); 
+	        
 	}
 
 	
@@ -150,7 +155,9 @@ public class AdminKelas {
 	    	  	System.out.println("Kondisi CCTV : " + dataSarana.getKondisi_CCTV());
 	    	  	System.out.println("Posisi CCTV 1 : " + dataSarana.getPosisi_CCTV());
 	    	  	System.out.println("Posisi CCTV 2 : " + dataSarana.getPosisi_CCTV());
+	    	  	
 	}
+	      
 	 void InsertLingkunganKelas(){
 		 Scanner scan = new Scanner(System.in);
 			
@@ -168,6 +175,7 @@ public class AdminKelas {
 	       
 	       System.out.println("Kondisi Jendela : ");
 	       dataLingkungan.setKondisiJendela(scan.nextLine());
+	       
 	   }
 	 
 	 void PrintLingkunganKelas(){
@@ -177,7 +185,9 @@ public class AdminKelas {
 		 System.out.println("Kondisi Atap : " + dataLingkungan.getKondisiAtap());
 		 System.out.println("Kondisi Pintu : " + dataLingkungan.getKondisiPintu());
 		 System.out.println("Kondisi Jendela : " + dataLingkungan.getKondisiJendela());
+		 
 	 }
+	 
 	 void InsertKebersihanRuangKelas(){
 		 Scanner scan = new Scanner (System.in);
 		 	System.out.println("Masukkan kondisi sirkulasi udara dalam ruangan : (baik/tidak baik) ");
@@ -201,6 +211,7 @@ public class AdminKelas {
 		 System.out.println("Kelembapan : " + dataKebersihan.getKelembapan());
 		 System.out.println("Suhu : " + dataKebersihan.getSuhu());
 	 }
+	 
 	 void InsertKenyamananRuangKelas(){
 		 Scanner scan = new Scanner(System.in);
 		 System.out.println("Kondisi kebisingan di dalam kelas : ");
@@ -226,7 +237,9 @@ public class AdminKelas {
 		 System.out.println("Kebocoran : " + dataKenyamanan.getKebocoran());
 		 System.out.println("Kerusakan : " + dataKenyamanan.getKerusakan());
 		 System.out.println("Keausan : " + dataKenyamanan.getKeausan());
+		 
 	 }
+	 
 	   void InsertKeamananRuangKelas(){
 		   	Scanner scan = new Scanner (System.in);
 		   	System.out.println("Kekokohan dalam kelas : ");
@@ -240,6 +253,7 @@ public class AdminKelas {
 	        
 	        System.out.println("Bahaya dalam kelas : ");
 	        dataKeamanan.setBahaya(scan.nextLine());
+	        
 	   }
 	   
 	  void PrintKeamananRuangKelas(){
@@ -248,7 +262,9 @@ public class AdminKelas {
 		  System.out.println("Kunci Pintu : " + dataKeamanan.getKunciPintu());
 		  System.out.println("Kunci Jendela : " + dataKeamanan.getKunciJendela());
 		  System.out.println("Bahaya : " + dataKeamanan.getBahaya());
+		  
 	  }  
+	  
 	}
 	   
 

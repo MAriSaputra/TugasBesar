@@ -53,6 +53,6 @@ public class KondisiRuangKelas {
     }
     
     double RasioLuas(){
-        return RasioLuas()/JumlahKursi;
+        return LuasRuang()/JumlahKursi;
     }
 }
