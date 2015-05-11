@@ -25,4 +25,9 @@ public class Inheritance {
 		System.out.println("Kondisi : "+ Kondisi);
 		System.out.println("Posisi : "+ Posisi);
 	}
+
+	boolean AnalysisJumlah() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

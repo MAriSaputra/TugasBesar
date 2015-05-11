@@ -79,8 +79,7 @@ public class AnalisisKelas {
         String KondisiKipasAngin = "Berfungsi dengan baik";
         String PosisiKipasAngin = "Di atap ruangan";
       	String Kondisi_AC = "Berfungsi dengan baik";
-        String Posisi_AC1= "Di belakang";
-        String Posisi_AC2= "Di samping";
+        String Posisi_AC= "Di belakang";
       	String SSID = "UMM Hotspot";
       	String Login = "Bisa Login";
       	String Kondisi_CCTV = "Berfungsi dengan baik";
@@ -160,12 +159,7 @@ public class AnalisisKelas {
              return true;
        }
        
-       if(Posisi_AC1.equals(sarana.getPosisi_AC())){
-            System.out.println("Sudah Sesuai Standard ");
-            return true;
-        }
-       
-       if(Posisi_AC2.equals(sarana.getPosisi_AC())){
+       if(Posisi_AC.equals(sarana.getPosisi_AC())){
             System.out.println("Sudah Sesuai Standard ");
             return true;
         }
