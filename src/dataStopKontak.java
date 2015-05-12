@@ -1,5 +1,5 @@
 
-public class dataStopKontak extends Inheritance {
+public class dataStopKontak extends Sarana {
 
 	public void data(){
 		System.out.println("Status Stop Kontak :");

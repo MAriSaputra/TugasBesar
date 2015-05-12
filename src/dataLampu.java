@@ -1,5 +1,5 @@
 
-public class dataLampu extends Inheritance { 
+public class dataLampu extends Sarana { 
 	
 
 	public void data(){

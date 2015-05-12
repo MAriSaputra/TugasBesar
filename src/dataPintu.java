@@ -1,14 +1,14 @@
 
-public class dataJendela extends Lingkungan{
+public class dataPintu extends Lingkungan {
 	public void data(){
-		System.out.println("Status data jendela :");
+		System.out.println("Status data pintu :");
 		Insert(); 
-		System.out.println("Review data jendela :");
+		System.out.println("Review data pintu :");
 		Print();
 	}
 	
 	@Override
-	  boolean AnalysisJendela(){
+	  boolean AnalysisPintu(){
 	  if(Kondisi.equals("baik")){
    	   System.out.println("Sudah Sesuai Standard ");
    	   return true;

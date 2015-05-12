@@ -1,5 +1,5 @@
 
-public class dataKabel_LCD extends Inheritance { 
+public class dataKabel_LCD extends Sarana { 
 	
 
 		public void data(){

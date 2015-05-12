@@ -1,5 +1,5 @@
 
-public class dataKipasAngin  extends Inheritance { 
+public class dataKipasAngin  extends Sarana { 
 	
 
 	public void data(){

@@ -1,5 +1,5 @@
 
-public class data_CCTV extends Inheritance { 
+public class data_CCTV extends Sarana { 
 	
 
 	public void data(){

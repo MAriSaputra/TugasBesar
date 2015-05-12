@@ -1,5 +1,5 @@
 
-public class data_AC extends Inheritance { 
+public class data_AC extends Sarana { 
 	
 
 	public void data(){
