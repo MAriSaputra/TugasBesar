@@ -1,9 +1,9 @@
 
 public class dataAtap extends Lingkungan {
 	public void data(){
-		System.out.println("Status data atap :");
+		System.out.println("== Status Data Atap ==");
 		Insert(); 
-		System.out.println("Review data atap :");
+		System.out.println("== Review Data Atap ==");
 		Print();
 	}
 	

@@ -1,9 +1,9 @@
 
 public class dataJendela extends Lingkungan{
 	public void data(){
-		System.out.println("Status data jendela :");
+		System.out.println("== Status Data Jendela ==");
 		Insert(); 
-		System.out.println("Review data jendela :");
+		System.out.println("== Review Data Jendela ==");
 		Print();
 	}
 	

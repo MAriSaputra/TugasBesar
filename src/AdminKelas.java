@@ -133,8 +133,7 @@ public class AdminKelas {
 	    	  	System.out.println("== Jumlah,Kondisi dan Posisi Sarana ==");
 	    	  	System.out.println("Jumlah Stop Kontak : " + dataSarana.getJumlahStopKontak());
 	    	  	System.out.println("Kondisi Stop Kontak : " + dataSarana.getKondisiStopKontak());
-	    	  	System.out.println("Posisi Stop Kontak 1 : " + dataSarana.getPosisiStopKontak());
-	    	  	System.out.println("Posisi Stop Kontak 2 : " + dataSarana.getPosisiStopKontak());
+	    	  	System.out.println("Posisi Stop Kontak  : " + dataSarana.getPosisiStopKontak());
 	    	  	System.out.println("Jumlah Kabel LCD : " + dataSarana.getJumlahKabel_LCD());
 	    	  	System.out.println("Kondisi Kabel LCD : " + dataSarana.getKondisiKabel_LCD());
 	    	  	System.out.println("Posisi Kabel LCD : " + dataSarana.getPosisiKabel_LCD());
@@ -144,7 +143,7 @@ public class AdminKelas {
 	    	  	System.out.println("Jumlah Kipas Angin : " + dataSarana.getJumlahKipasAngin());
 	    	  	System.out.println("Kondisi Kipas Angin : " + dataSarana.getKondisiKipasAngin());
 	    	  	System.out.println("Posisi Kipas Angin 1 : " + dataSarana.getPosisiKipasAngin());
-	    	  	System.out.println("Kondisi Kipas Angin 2 : " + dataSarana.getKondisiKipasAngin());
+	    	  	System.out.println("Posisi Kipas Angin 2 : " + dataSarana.getPosisiKipasAngin());
 	    	  	System.out.println("Jumlah AC : " + dataSarana.getJumlah_AC());
 	    	  	System.out.println("Kondisi AC : " + dataSarana.getKondisi_AC());
 	    	  	System.out.println("Posisi AC : " + dataSarana.getPosisi_AC());

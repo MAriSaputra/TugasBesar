@@ -2,9 +2,9 @@
 public class dataStopKontak extends Sarana {
 
 	public void data(){
-		System.out.println("Status Stop Kontak :");
+		System.out.println("== Status Data Stop Kontak ==");
 		Insert();
-		System.out.println("Review Stop Kontak :");
+		System.out.println("== Review Data Stop Kontak ==");
 		Print();
 		
 	}
@@ -21,30 +21,32 @@ public class dataStopKontak extends Sarana {
 			return false;
 		}
 	}
-	
-	String AnalysisKondisi(){
+	@Override
+	boolean AnalysisKondisi(){
 		if(Kondisi.equals("baik")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
 		}
-		return Kondisi;
+		return false;
 	}
-	
-	String AnalysisPosisi(){
-		if(Posisi.equals("di pojok ruangan")){
+	@Override
+	boolean AnalysisPosisi(){
+		if(Posisi.equals("di_pojok_ruangan")){
 			System.out.println("Sesuai");
+			return true;
 		}
-		if(Posisi.equals("di dekat dosen")){
+		if(Posisi.equals("di_dekat_dosen")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
-		}
-		return Posisi;
+			return false;
 	}
-
+	}
 }

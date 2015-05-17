@@ -1,9 +1,9 @@
 
 public class dataKebisingan extends Kenyamanan{
 	public void data(){
-		System.out.println("Status data kebisingan :");
+		System.out.println("== Status Data Kebisingan ==");
 		Insert(); 
-		System.out.println("Review data kebisingan :");
+		System.out.println("== Review Data Kebisingan ==");
 		Print();
 	}
 	

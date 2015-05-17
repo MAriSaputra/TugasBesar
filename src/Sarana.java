@@ -29,4 +29,14 @@ public class Sarana {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	boolean AnalysisKondisi() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	boolean AnalysisPosisi() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

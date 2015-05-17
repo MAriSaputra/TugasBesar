@@ -1,9 +1,9 @@
 
 public class dataSuhu extends Kebersihan{
 	public void data(){
-		System.out.println("Status data nilai suhu :");
+		System.out.println("== Status Data Nilai Suhu ==");
 		Insert(); 
-		System.out.println("Review daata nilai suhu :");
+		System.out.println("== Review Data Nilai Suhu ==");
 		Print();
 	}
 	

@@ -3,9 +3,9 @@ public class data_CCTV extends Sarana {
 	
 
 	public void data(){
-		System.out.println("Status data CCTV :");
+		System.out.println("== Status Data CCTV ==");
 		Insert(); 
-		System.out.println("Review data CCTV :");
+		System.out.println("== Review Data CCTV ==");
 		Print();
 	}
 	
@@ -22,28 +22,31 @@ public class data_CCTV extends Sarana {
 		}
 	}
 	
-	String AnalysisKondisi(){
-		if(Kondisi.equals("Baik")){
+	boolean AnalysisKondisi(){
+		if(Kondisi.equals("baik")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
+			return false;
 		}
-		return Kondisi;
 	}
 	
-	String AnalysisPosisi(){
-		if(Posisi.equals("di Depan")){
+	boolean AnalysisPosisi(){
+		if(Posisi.equals("di_depan")){
 			System.out.println("Sesuai");
+			return true;
 		}
-		if(Posisi.equals("di Belakang")){
+		if(Posisi.equals("di_belakang")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		else{
 			System.out.println("Tidak Sesuai");
+		return false;
 		}
-		return Posisi;
 	}
 
 }

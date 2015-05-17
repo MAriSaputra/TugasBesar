@@ -1,15 +1,15 @@
 
-public class dataDinding extends Lingkungan {
+public class dataKekokohan extends Keamanan {
 	public void data(){
-		System.out.println("== Status Data Dinding ==");
+		System.out.println("== Status Data Kekokohan ==");
 		Insert(); 
-		System.out.println("== Review Data Dinding ==");
+		System.out.println("== Review Data Kekokohan ==");
 		Print();
 	}
 	
 	@Override
-	boolean AnalysisDinding(){
-	  if(Kondisi.equals("baik")){
+	  boolean AnalysisKekokohan(){
+	  if(Kekokohan.equals("kokoh")){
    	   System.out.println("Sudah Sesuai Standard ");
    	   return true;
       }

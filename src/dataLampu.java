@@ -3,9 +3,9 @@ public class dataLampu extends Sarana {
 	
 
 	public void data(){
-		System.out.println("Status data Lampu :");
+		System.out.println("== Status Data Lampu ==");
 		Insert(); 
-		System.out.println("Review data Lampu :");
+		System.out.println("== Review Data Lampu ==");
 		Print();
 	}
 	
@@ -21,27 +21,30 @@ public class dataLampu extends Sarana {
 			return false;
 		}
 	}
-	
-	String AnalysisKondisi(){
+	@Override
+	boolean AnalysisKondisi(){
 		if(Kondisi.equals("baik")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
 		}
-		return Kondisi;
+		return false;
 	}
 	
-	String AnalysisPosisi(){
-		if(Posisi.equals("di atap ruangan")){
+	@Override
+	boolean AnalysisPosisi(){
+		if(Posisi.equals("di_atap_ruangan")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
 		}
-		return Posisi;
+		return false;
 	}
 
 }

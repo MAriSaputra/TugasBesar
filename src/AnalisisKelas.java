@@ -75,7 +75,7 @@ public class AnalisisKelas {
         String KondisiKabel_LCD = "Berfungsi dengan baik";
         String PosisiKabel_LCD = "Dekat dosen";
         String KondisiLampu= "Berfungsi dengan baik";
-        String PosisiLampu = "Diatap ruangan";
+        String PosisiLampu = "Di atap ruangan";
         String KondisiKipasAngin = "Berfungsi dengan baik";
         String PosisiKipasAngin = "Di atap ruangan";
       	String Kondisi_AC = "Berfungsi dengan baik";
@@ -143,11 +143,18 @@ public class AnalisisKelas {
                 System.out.println("Sudah Sesuai Standard ");
                 return true;
             }
-        
-        if(PosisiKipasAngin.equals(sarana.getPosisiKipasAngin())){
-           System.out.println("Sudah Sesuai Standard ");
-           return true;
-        }
+            if(KondisiKipasAngin.equals(sarana.getKondisiKipasAngin())){
+                System.out.println("Sudah Sesuai Standard ");
+                return true;
+            }
+            if(PosisiKipasAngin.equals(sarana.getPosisiKipasAngin())){
+            	System.out.println("Sudah Sesuai Standard ");
+            	return true;
+            }
+            if(PosisiKipasAngin.equals(sarana.getPosisiKipasAngin())){
+            	System.out.println("Sudah Sesuai Standard ");
+            	return true;
+            }
               
         if(sarana.getJumlah_AC()>=1){
             System.out.println("Sudah Sesuai Standard ");

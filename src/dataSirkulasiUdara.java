@@ -1,9 +1,9 @@
 
 public class dataSirkulasiUdara extends Kebersihan{
 	public void data(){
-		System.out.println("Status data sirkulasi udara :");
+		System.out.println("== Status Data Sirkulasi Udara ==");
 		Insert(); 
-		System.out.println("Review data sirkulasi udara :");
+		System.out.println("== Review Data Sirkulasi Udara ==");
 		Print();
 	}
 	

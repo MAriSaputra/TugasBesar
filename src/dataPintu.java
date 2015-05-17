@@ -1,9 +1,9 @@
 
 public class dataPintu extends Lingkungan {
 	public void data(){
-		System.out.println("Status data pintu :");
+		System.out.println("== Status Data Pintu ==");
 		Insert(); 
-		System.out.println("Review data pintu :");
+		System.out.println("== Review Data Pintu ==");
 		Print();
 	}
 	

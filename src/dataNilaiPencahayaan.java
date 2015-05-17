@@ -1,9 +1,9 @@
 
 public class dataNilaiPencahayaan extends Kebersihan{
 	public void data(){
-		System.out.println("Status data nilai pencahayaan :");
+		System.out.println("== Status Data Nilai Pencahayaan ==");
 		Insert(); 
-		System.out.println("Review daata nilai pencahayaan :");
+		System.out.println("== Review Data Nilai Pencahayaan ==");
 		Print();
 	}
 	

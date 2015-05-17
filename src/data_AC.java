@@ -3,45 +3,51 @@ public class data_AC extends Sarana {
 	
 
 	public void data(){
-		System.out.println("Status data AC :");
+		System.out.println("== Status Data AC ==");
 		Insert(); 
-		System.out.println("Review data AC :");
+		System.out.println("== Review Data AC ==");
 		Print();
 	}
 	
 	@Override	
 	boolean AnalysisJumlah(){
 		if(Jumlah == 1){
-			System.out.println("sesuai");
+			System.out.println("Sesuai");
 			return true;
 		}
 		
 		else{
-			System.out.println("tidak sesuai");
+			System.out.println("Tidak Sesuai");
 			return false;
 		}
 	}
 	
-	String AnalysisKondisi(){
+	@Override
+	boolean AnalysisKondisi(){
 		if(Kondisi.equals("baik")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
+			return false;
 		}
-		return Kondisi;
+		
 	}
 	
-	String AnalysisPosisi(){
-		if(Posisi.equals("di samping ruangan")){
+	@Override
+	boolean AnalysisPosisi(){
+		if(Posisi.equals("di_samping_ruangan")){
 			System.out.println("Sesuai");
+			return true;
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
+			return false;
 		}
-		return Posisi;
+		
 	}
 
 

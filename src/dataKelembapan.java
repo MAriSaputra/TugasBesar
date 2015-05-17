@@ -1,9 +1,9 @@
 
 public class dataKelembapan extends Kebersihan{
 	public void data(){
-		System.out.println("Status data nilai kelembapan :");
+		System.out.println("== Status Data Nilai Kelembapan ==");
 		Insert(); 
-		System.out.println("Review daata nilai kelembapan :");
+		System.out.println("== Review Data Nilai Kelembapan ==");
 		Print();
 	}
 	

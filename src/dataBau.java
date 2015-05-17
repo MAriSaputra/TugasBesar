@@ -1,9 +1,9 @@
 
 public class dataBau extends Kenyamanan{
 	public void data(){
-		System.out.println("Status data bau :");
+		System.out.println("== Status Data Bau ==");
 		Insert(); 
-		System.out.println("Review data bau :");
+		System.out.println("== Review Data Bau ==");
 		Print();
 	}
 	

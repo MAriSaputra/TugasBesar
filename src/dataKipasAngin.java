@@ -3,9 +3,9 @@ public class dataKipasAngin  extends Sarana {
 	
 
 	public void data(){
-		System.out.println("Status data Kipas Angin :");
+		System.out.println("== Status Data Kipas Angin ==");
 		Insert(); 
-		System.out.println("Review data Kipas Angin :");
+		System.out.println("== Review Data Kipas Angin ==");
 		Print();
 	}
 	
@@ -21,8 +21,8 @@ public class dataKipasAngin  extends Sarana {
 			return false;
 		}
 	}
-	
-	String AnalysisKondisi(){
+	@Override
+	boolean AnalysisKondisi(){
 		if(Kondisi.equals("baik")){
 			System.out.println("Sesuai");
 		}
@@ -30,18 +30,18 @@ public class dataKipasAngin  extends Sarana {
 		else{
 			System.out.println("Tidak Sesuai");
 		}
-		return Kondisi;
+		return false;
 	}
-	
-	String AnalysisPosisi(){
-		if(Posisi.equals("di samping ruangan")){
+	@Override
+	boolean AnalysisPosisi(){
+		if(Posisi.equals("di_samping_ruangan")){
 			System.out.println("Sesuai");
 		}
 		
 		else{
 			System.out.println("Tidak Sesuai");
 		}
-		return Posisi;
+		return false;
 	}
 
 }

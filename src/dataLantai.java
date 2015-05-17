@@ -1,9 +1,9 @@
 
 public class dataLantai extends Lingkungan{
 	public void data(){
-		System.out.println("Status data lantai :");
+		System.out.println("== Status Data Lantai ==");
 		Insert(); 
-		System.out.println("Review data lantai :");
+		System.out.println("== Review Data Lantai ==");
 		Print();
 	}
 	@Override
