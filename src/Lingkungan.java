@@ -1,47 +1,44 @@
 import java.util.Scanner;
-public class Lingkungan {
-	String Kondisi;
+abstract public class Lingkungan implements LingkunganKelas{
+	String Lantai;
+	String Dinding;
+	String Atap;
+	String Pintu;
+	String Jendela;
 
 	
 	Scanner scan = new Scanner(System.in);
 	
-public void Insert(){
-		
-		System.out.println("masukkan kondisi : ");
-		Kondisi = scan.next();
-		
-		
-	}
+
 	
-	public void Print(){
+	public void Print(String lingkungan){
 		
-		System.out.println("kondisi : "+ Kondisi);
+		System.out.println("kondisi lantai: "+ Lantai);
+		System.out.println(AnalysisLantai());
+		System.out.println("kondisi dinding: "+ Dinding);
+		System.out.println(AnalysisDinding());
+		System.out.println("kondisi atap: "+ Atap);
+		System.out.println(AnalysisAtap());
+		System.out.println("kondisi pintu: "+ Pintu);
+		System.out.println(AnalysisPintu());
+		System.out.println("kondisi jendela: "+ Jendela);
+		System.out.println(AnalysisJendela());
 		
 	}
 
-	boolean AnalysisLantai() {
+	abstract String AnalysisLantai();
+	abstract String AnalysisDinding();
+	abstract String AnalysisAtap();
+	abstract String AnalysisPintu();
+	abstract String AnalysisJendela();
+
+	public void Insert(String lingkungan) {
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
-	boolean AnalysisDinding() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
-	boolean AnalysisAtap() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	boolean AnalysisPintu() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	boolean AnalysisJendela() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
+		
 
 }

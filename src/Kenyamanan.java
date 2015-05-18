@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Kenyamanan {
+abstract public class Kenyamanan implements KenyamananKelas{
 
 		String Kebisingan = "Tidak Bising";
 		String Bau = "Tidak Bau";
@@ -9,54 +9,31 @@ public class Kenyamanan {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		public void Insert(){
+		public void Print(String string){
 			
-			System.out.println("masukkan kebisingan : ");
-			Kebisingan = scan.next();
-			System.out.println("masukkan bau : ");
-			Bau = scan.next();
-			System.out.println("masukkan kebocoran : ");
-			Kebocoran = scan.next();
-			System.out.println("masukkan kerusakan : ");
-			Kerusakan = scan.next();
-			System.out.println("masukkan keausan : ");
-			Keausan = scan.next();
+			System.out.println("kebisingan: "+ Kebisingan);
+			System.out.println(AnalysisKebisingan());
+			System.out.println("bau: "+ Bau);
+			System.out.println(AnalysisBau());
+			System.out.println("kebocoran: "+ Kebocoran);
+			System.out.println(AnalysisKebocoran());
+			System.out.println("kerusakan: "+ Kerusakan);
+			System.out.println(AnalysisKerusakan());
+			System.out.println("keausan: "+ Keausan);
+			System.out.println(AnalysisKeausan());
 			
+		}
+
+		abstract String AnalysisKebisingan();			
+		abstract String AnalysisBau();
+		abstract String AnalysisKebocoran();	
+		abstract String AnalysisKerusakan();
+		abstract String AnalysisKeausan();
+
+		public void Insert(String data) {
+			// TODO Auto-generated method stub
 			
 		}
 		
-		public void Print(){
-			
-			System.out.println("kebisingan: "+ Kebisingan);
-			System.out.println("bau: "+ Bau);
-			System.out.println("kebocoran: "+ Kebocoran);
-			System.out.println("kerusakan: "+ Kerusakan);
-			System.out.println("keausan: "+ Keausan);
-			
-		}
-
-		boolean AnalysisKebisingan() {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		boolean AnalysisBau() {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		boolean AnalysisKebocoran() {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		boolean AnalysisKerusakan() {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-		boolean AnalysisKeausan() {
-			// TODO Auto-generated method stub
-			return false;
-		}
+		
 }

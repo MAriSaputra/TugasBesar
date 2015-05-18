@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Kebersihan {
+abstract public class Kebersihan implements KebersihanKelas{
 	String SirkulasiUdara = "Lancar";
 	int NilaiPencahayaan;
 	int Kelembapan;
@@ -7,19 +7,7 @@ public class Kebersihan {
 
 	Scanner scan = new Scanner(System.in);
 	
-	public void Insert(){
-		
-		System.out.println("masukkan sirkulasi udara : ");
-		SirkulasiUdara = scan.next();
-		System.out.println("masukkan nilai pencahayaan : ");
-		NilaiPencahayaan = scan.nextInt();
-		System.out.println("masukkan nilai kelembapan : ");
-		Kelembapan = scan.nextInt();
-		System.out.println("masukkan nilai suhu : ");
-		Suhu = scan.nextInt();
-	}
-	
-	public void Print(){
+	public void Print(String kebersihan){
 			
 		System.out.println("Sirkulasi Udara : "+ SirkulasiUdara);
 		System.out.println("Nilai Pencahayaan : "+ NilaiPencahayaan);
@@ -27,23 +15,14 @@ public class Kebersihan {
 		System.out.println("Nilai Suhu : "+ Suhu);
 }
 
-	boolean AnalysisSirkulasiUdara() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	abstract String AnalysisSirkulasiUdara();
+	abstract String AnalysisNilaiPencahayaan();
+	abstract String AnalysisKelembapan();
+	abstract String AnalysisSuhu();
 
-	boolean AnalysisNilaiPencahayaan() {
+	public void Insert(String data) {
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
-
-	boolean AnalysisKelembapan() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	boolean AnalysisSuhu() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+		
 }
