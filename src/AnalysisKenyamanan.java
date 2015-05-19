@@ -1,8 +1,8 @@
 
 public class AnalysisKenyamanan extends Kenyamanan {
 	public void data(){
-		Insert("== Status Data =="); 
-		Print("== Review Data ==");
+		Insert(); 
+		Print();
 		
 	}
 	@Override
@@ -61,30 +61,6 @@ public class AnalysisKenyamanan extends Kenyamanan {
 	      }
 	}
 	
-	@Override
-	public void Insert(String data){
-		
-		System.out.println("masukkan kebisingan : ");
-		Kebisingan = scan.next();
-		System.out.println("masukkan bau : ");
-		Bau = scan.next();
-		System.out.println("masukkan kebocoran : ");
-		Kebocoran = scan.next();
-		System.out.println("masukkan kerusakan : ");
-		Kerusakan = scan.next();
-		System.out.println("masukkan keausan : ");
-		Keausan = scan.next();
-		
-		
-	}
-	@Override
-	public void Insert() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void Print() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 }

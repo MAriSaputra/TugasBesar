@@ -1,135 +1,220 @@
 
 public class AnalysisSarana extends Sarana{
 	public void data(){
-		Insert("== Status Data =="); 
-		Print("== Review Data ==");
+		Insert(); 
+		Print();
 		
 	}
 
-	@Override
-	public void Insert() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void Print() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean AnalysisJumlah() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 
 	@Override
 	boolean AnalysisJumlahStopKontak() {
-		// TODO Auto-generated method stub
-		return false;
+		if(JumlahStopKontak >= 4){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		else{
+			System.out.println("Tidak Sesuai");
+			return false;
+		}
+		
 	}
 
 	@Override
 	String AnalysisKondisiStopKontak() {
-		// TODO Auto-generated method stub
-		return null;
+		if(KondisiStopKontak.equals("baik")){
+			return "Sesuai";			
+		}
+		
+		else{
+			return "Tidak Sesuai";
+		}
+		
 	}
-
 	@Override
 	String AnalysisPosisiStopKontak() {
-		// TODO Auto-generated method stub
-		return null;
+		if(PosisiStopKontak.equals("di_pojokkan")||PosisiStopKontak.equals("di_dekat_dosen")){
+			return "Sesuai";
+		}
+		else{
+			return "Tidak Sesuai";
+	}
 	}
 
 	@Override
 	boolean AnalysisJumlahKabel_LCD() {
-		// TODO Auto-generated method stub
-		return false;
+		if(JumlahKabel_LCD == 1){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		else{
+			System.out.println("Tidak Sesuai");
+			return false;
+		}
+		
 	}
 
 	@Override
 	String AnalysisKondisiKabel_LCD() {
-		// TODO Auto-generated method stub
-		return null;
+		if(KondisiKabel_LCD.equals("baik")){
+			return "Sesuai";			
+		}
+		
+		else{
+			return "Tidak Sesuai";
+		}
+		
 	}
 
 	@Override
 	String AnalysisPosisiKabel_LCD() {
-		// TODO Auto-generated method stub
-		return null;
+		if(PosisiKabel_LCD.equals("di_dekat_dosen")){
+			return "Sesuai";
+		}
+		else{
+			return "Tidak Sesuai";
+	}
 	}
 
 	@Override
 	boolean AnalysisJumlahLampu() {
-		// TODO Auto-generated method stub
-		return false;
+		if(JumlahLampu >= 4){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		else{
+			System.out.println("Tidak Sesuai");
+			return false;
+		}
 	}
 
 	@Override
 	String AnalysisKondisiLampu() {
-		// TODO Auto-generated method stub
-		return null;
+		if(KondisiLampu.equals("baik")){
+			return "Sesuai";			
+		}
+		
+		else{
+			return "Tidak Sesuai";
+		}
+		
 	}
 
 	@Override
 	String AnalysisPosisiLampu() {
-		// TODO Auto-generated method stub
-		return null;
+		if(PosisiKabel_LCD.equals("di_langit-langit")){
+			return "Sesuai";
+		}
+		else{
+			return "Tidak Sesuai";
+	}
 	}
 
 	@Override
 	boolean AnalysisJumlahKipasAngin() {
-		// TODO Auto-generated method stub
-		return false;
+		if(JumlahKipasAngin == 2){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		else{
+			System.out.println("Tidak Sesuai");
+			return false;
+		}
 	}
 
 	@Override
 	String AnalysisKondisiKipasAngin() {
-		// TODO Auto-generated method stub
-		return null;
+		if(KondisiKipasAngin.equals("baik")){
+			return "Sesuai";			
+		}
+		
+		else{
+			return "Tidak Sesuai";
+		}
 	}
 
 	@Override
 	String AnalysisPosisiKipasAngin() {
-		// TODO Auto-generated method stub
-		return null;
+		if(PosisiKipasAngin.equals("di_dinding")||PosisiKipasAngin.equals("di_langit-langit")){
+			return "Sesuai";
+		}
+		else{
+			return "Tidak Sesuai";
 	}
-
+	}
 	@Override
 	boolean AnalysisJumlah_AC() {
-		// TODO Auto-generated method stub
-		return false;
+		if(Jumlah_AC == 2){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		else{
+			System.out.println("Tidak Sesuai");
+			return false;
+		}
 	}
 
 	@Override
 	String AnalysisKondisi_AC() {
-		// TODO Auto-generated method stub
-		return null;
+		if(Kondisi_AC.equals("baik")){
+			return "Sesuai";			
+		}
+		
+		else{
+			return "Tidak Sesuai";
+		}
 	}
 
 	@Override
 	String AnalysisPosisi_AC() {
-		// TODO Auto-generated method stub
-		return null;
+		if(PosisiKabel_LCD.equals("di_dinding")){
+			return "Sesuai";
+		}
+		else{
+			return "Tidak Sesuai";
+	}
 	}
 
 	@Override
 	boolean AnalysisJumlah_CCTV() {
-		// TODO Auto-generated method stub
-		return false;
+		if(Jumlah_CCTV == 2){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		else{
+			System.out.println("Tidak Sesuai");
+			return false;
+		}
 	}
 
 	@Override
 	String AnalysisKondisi_CCTV() {
-		// TODO Auto-generated method stub
-		return null;
+		if(Kondisi_CCTV.equals("baik")){
+			return "Sesuai";			
+		}
+		
+		else{
+			return "Tidak Sesuai";
+		}
 	}
 
 	@Override
 	String AnalysisPosisi_CCTV() {
-		// TODO Auto-generated method stub
-		return null;
+		if(Posisi_CCTV.equals("di_depan")||Posisi_CCTV.equals("di_belakang")){
+			return "Sesuai";
+		}
+		else{
+			return "Tidak Sesuai";
 	}
+	}
+
+
 
 }

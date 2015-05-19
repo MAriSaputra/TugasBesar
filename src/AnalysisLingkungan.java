@@ -1,8 +1,8 @@
 
 public class AnalysisLingkungan extends Lingkungan{
 	public void data(){
-		Insert("== Status Data =="); 
-		Print("== Review Data ==");
+		Insert(); 
+		Print();
 		
 	}
 	@Override
@@ -60,29 +60,5 @@ public class AnalysisLingkungan extends Lingkungan{
 	      }
 	}
 	
-	@Override
-	public void Insert(String lingkungan){
-		
-		System.out.println("masukkan kondisi lantai: ");
-		Lantai = scan.next();
-		System.out.println("masukkan kondisi dinding: ");
-		Dinding = scan.next();
-		System.out.println("masukkan kondisi atap: ");
-		Atap = scan.next();
-		System.out.println("masukkan kondisi pintu: ");
-		Pintu = scan.next();
-		System.out.println("masukkan kondisi jendela: ");
-		Jendela = scan.next();
-		
-	}
-	@Override
-	public void Insert() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void Print() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

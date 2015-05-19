@@ -1,17 +1,16 @@
 import java.util.Scanner;
 abstract public class Lingkungan implements LingkunganKelas{
+	
 	String Lantai;
 	String Dinding;
 	String Atap;
 	String Pintu;
 	String Jendela;
 
-	
 	Scanner scan = new Scanner(System.in);
 	
-
-	
-	public void Print(String lingkungan){
+	@Override
+	public void Print(){
 		
 		System.out.println("kondisi lantai: "+ Lantai);
 		System.out.println(AnalysisLantai());
@@ -32,8 +31,22 @@ abstract public class Lingkungan implements LingkunganKelas{
 	abstract String AnalysisPintu();
 	abstract String AnalysisJendela();
 
-	public void Insert(String lingkungan) {
-		// TODO Auto-generated method stub
+	
+		@Override
+		public void Insert(){
+			
+			System.out.println("masukkan kondisi lantai: ");
+			Lantai = scan.next();
+			System.out.println("masukkan kondisi dinding: ");
+			Dinding = scan.next();
+			System.out.println("masukkan kondisi atap: ");
+			Atap = scan.next();
+			System.out.println("masukkan kondisi pintu: ");
+			Pintu = scan.next();
+			System.out.println("masukkan kondisi jendela: ");
+			Jendela = scan.next();
+			
+		}
 		
 	}
 
@@ -41,4 +54,4 @@ abstract public class Lingkungan implements LingkunganKelas{
 	
 		
 
-}
+

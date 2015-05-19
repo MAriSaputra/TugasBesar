@@ -1,5 +1,5 @@
 import java.util.Scanner;
-abstract public class Keamanan {
+abstract public class Keamanan implements KeamananKelas {
 
 	String Kekokohan;
 	String KunciPintu;
@@ -25,12 +25,26 @@ abstract public class Keamanan {
 	abstract String AnalysisKunciPintu();
 	abstract String AnalysisKunciJendela();
 	abstract String AnalysisBahaya();
-
-	public void Insert(String data) {
-		// TODO Auto-generated method stub
+	
+	@Override
+	public void Insert() {
+		
+			System.out.println("masukkan Kekokohan : ");
+			Kekokohan = scan.next();
+			
+			System.out.println("masukkan Kunci Pintu : ");
+			KunciPintu= scan.next();
+			
+			System.out.println("masukkan Kunci Jendela : ");
+			KunciJendela = scan.next();
+			
+			System.out.println("masukkan Bahaya : ");
+			Bahaya = scan.next();
+			
+		}
 		
 	}
 
-	
+
 		
-}
+

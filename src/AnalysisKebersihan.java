@@ -1,8 +1,8 @@
 
 public class AnalysisKebersihan extends Kebersihan{
 	public void data(){
-		Insert("== Status Data =="); 
-		Print("== Review Data ==");
+		Insert(); 
+		Print();
 	}
 	@Override
 	String AnalysisSirkulasiUdara() {
@@ -17,7 +17,7 @@ public class AnalysisKebersihan extends Kebersihan{
 
 	@Override
 	String AnalysisNilaiPencahayaan() {
-		if(NilaiPencahayaan<=350 && NilaiPencahayaan>=250){  
+		if(NilaiPencahayaan<=300 && NilaiPencahayaan>=250){  
 			return "Sudah Sesuai Standard ";
 	      }
 		  else {
@@ -40,7 +40,7 @@ public class AnalysisKebersihan extends Kebersihan{
 
 	@Override
 	String AnalysisSuhu() {
-		if(Suhu<=35 && Suhu>=25){
+		if(Suhu<=30 && Suhu>=25){
 	         
 			return "Sudah Sesuai Standard ";
 	      }
@@ -50,27 +50,7 @@ public class AnalysisKebersihan extends Kebersihan{
 	      }
 	}
 	
-	@Override
-	public void Insert(String kebersihan){
-		
-		System.out.println("masukkan sirkulasi udara : ");
-		SirkulasiUdara = scan.next();
-		System.out.println("masukkan nilai pencahayaan : ");
-		NilaiPencahayaan = scan.nextInt();
-		System.out.println("masukkan nilai kelembapan : ");
-		Kelembapan = scan.nextInt();
-		System.out.println("masukkan nilai suhu : ");
-		Suhu = scan.nextInt();
-	}
-	@Override
-	public void Insert() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void Print() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 }

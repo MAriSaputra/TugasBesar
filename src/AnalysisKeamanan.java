@@ -1,8 +1,8 @@
 
-public class AnalysisKeamanan extends Keamanan implements KeamananKelas{
+public class AnalysisKeamanan extends Keamanan {
 	public void data(){
-		Insert("== Status Data =="); 
-		Print("== Review Data ==");
+		Insert(); 
+		Print();
 		
 	}
 	
@@ -50,29 +50,5 @@ public class AnalysisKeamanan extends Keamanan implements KeamananKelas{
 	      }
 }
 
-	@Override
-	public void Insert(String data) {
-		System.out.println("masukkan Kekokohan : ");
-		Kekokohan = scan.next();
-		
-		System.out.println("masukkan Kunci Pintu : ");
-		KunciPintu= scan.next();
-		
-		System.out.println("masukkan Kunci Jendela : ");
-		KunciJendela = scan.next();
-		
-		System.out.println("masukkan Bahaya : ");
-		Bahaya = scan.next();
-		
-	}
-
-	@Override
-	public void Insert() {
-		// TODO Auto-generated method stub
-		
-	}
-	public void Print(String keamanan) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
