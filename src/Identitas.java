@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Identitas {
@@ -16,9 +19,16 @@ public class Identitas {
 		FakultasdanJurusan = scan.next();
 	}
 	void Print(){
-		System.out.println("Nama Gedung : "+ NamaGedung);
-		System.out.println("Lokasi Ruangan : "+ LokasiRuang);
-		System.out.println("Fakultas dan Jurusan : "+ FakultasdanJurusan);
+		try{
+			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+			System.setOut(out);
+			out.println("Nama Gedung : "+ NamaGedung);
+			out.println("Lokasi Ruangan : "+ LokasiRuang);
+			out.println("Fakultas dan Jurusan : "+ FakultasdanJurusan);
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
+		
 
 	}
 }

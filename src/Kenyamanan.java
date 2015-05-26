@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Scanner;
 abstract public class Kenyamanan implements KenyamananKelas{
 
@@ -34,16 +37,23 @@ abstract public class Kenyamanan implements KenyamananKelas{
 
 		@Override
 		public void Print() {
-			System.out.println("kebisingan: "+ Kebisingan);
-			System.out.println(AnalysisKebisingan());
-			System.out.println("bau: "+ Bau);
-			System.out.println(AnalysisBau());
-			System.out.println("kebocoran: "+ Kebocoran);
-			System.out.println(AnalysisKebocoran());
-			System.out.println("kerusakan: "+ Kerusakan);
-			System.out.println(AnalysisKerusakan());
-			System.out.println("keausan: "+ Keausan);
-			System.out.println(AnalysisKeausan());
+			try{
+				PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+				System.setOut(out);
+				out.println("kebisingan: "+ Kebisingan);
+				out.println(AnalysisKebisingan());
+				out.println("bau: "+ Bau);
+				out.println(AnalysisBau());
+				out.println("kebocoran: "+ Kebocoran);
+				out.println(AnalysisKebocoran());
+				out.println("kerusakan: "+ Kerusakan);
+				out.println(AnalysisKerusakan());
+				out.println("keausan: "+ Keausan);
+				out.println(AnalysisKeausan());
+				}catch(IOException ex){
+				ex.printStackTrace();
+			}
+			
 			
 		}
 			

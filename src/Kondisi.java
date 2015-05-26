@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Scanner;
 public class Kondisi {
 	
@@ -38,14 +41,18 @@ public class Kondisi {
 	}
 	
 	public void Print(){
-		
-		System.out.println("Panjang : "+ PanjangRuang);
-		System.out.println("Lebar : "+ LebarRuang);
-		System.out.println("Jumlah kursi : "+ JumlahKursi);
-		System.out.println("Jumlah pintu : "+ JumlahPintu);
-		System.out.println("Jumlah jendela : "+ JumlahJendela);
-		System.out.println("Luas Ruang : "+ LuasRuang);
-		System.out.println("Rasio Luas : "+ RasioLuas);
-		
+		try{
+			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+			System.setOut(out);
+			out.println("Panjang : "+ PanjangRuang);
+			out.println("Lebar : "+ LebarRuang);
+			out.println("Jumlah kursi : "+ JumlahKursi);
+			out.println("Jumlah pintu : "+ JumlahPintu);
+			out.println("Jumlah jendela : "+ JumlahJendela);
+			out.println("Luas Ruang : "+ LuasRuang);
+			out.println("Rasio Luas : "+ RasioLuas);
+			}catch(IOException ex){
+			ex.printStackTrace();
+			}
 	}
 }

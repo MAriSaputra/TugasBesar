@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Scanner;
 abstract public class Sarana implements SaranaKelas{
 	
@@ -52,39 +55,45 @@ abstract public class Sarana implements SaranaKelas{
 	
 	@Override
 	public void Print() {
+		try{
+			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+			System.setOut(out);
+			out.println(AnalysisJumlahStopKontak());
+			out.println("Analysis Jumlah : "+ JumlahStopKontak);
+			out.println(AnalysisJumlahKabel_LCD());
+			out.println("Analysis Jumlah : "+ JumlahKabel_LCD);
+			out.println(AnalysisJumlahLampu());
+			out.println("Analysis Jumlah : "+ JumlahLampu);
+			out.println(AnalysisJumlahKipasAngin());
+			out.println("Analysis Jumlah : "+ JumlahKipasAngin);
+			out.println(AnalysisJumlah_CCTV());
+			out.println("Analysis Jumlah : "+ Jumlah_CCTV);
+			
+			out.println(AnalysisKondisiStopKontak());
+			out.println("Analysis Kondisi : "+ KondisiStopKontak);
+			out.println(AnalysisKondisiKabel_LCD());
+			out.println("Analysis Kondisi : "+ KondisiKabel_LCD);
+			out.println(AnalysisKondisiLampu());
+			out.println("Analysis Kondisi : "+ KondisiLampu);
+			out.println(AnalysisKondisiKipasAngin());
+			out.println("Analysis Kondisi : "+ KondisiKipasAngin);
+			out.println(AnalysisKondisi_CCTV());
+			out.println("Analysis Kondisi : "+ Kondisi_CCTV);
+			
+			out.println(AnalysisPosisiStopKontak());
+			out.println("Analysis Posisi : "+ PosisiStopKontak);
+			out.println(AnalysisPosisiKabel_LCD());
+			out.println("Analysis Posisi : "+ PosisiKabel_LCD);
+			out.println(AnalysisPosisiLampu());
+			out.println("Analysis Posisi : "+ PosisiLampu);
+			out.println(AnalysisPosisiKipasAngin());
+			out.println("Analysis Posisi : "+ PosisiKipasAngin);
+			out.println(AnalysisPosisi_CCTV());
+			out.println("Analysis Posisi : "+ Posisi_CCTV);
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
 		
-		System.out.println(AnalysisJumlahStopKontak());
-		System.out.println("Analysis Jumlah : "+ JumlahStopKontak);
-		System.out.println(AnalysisJumlahKabel_LCD());
-		System.out.println("Analysis Jumlah : "+ JumlahKabel_LCD);
-		System.out.println(AnalysisJumlahLampu());
-		System.out.println("Analysis Jumlah : "+ JumlahLampu);
-		System.out.println(AnalysisJumlahKipasAngin());
-		System.out.println("Analysis Jumlah : "+ JumlahKipasAngin);
-		System.out.println(AnalysisJumlah_CCTV());
-		System.out.println("Analysis Jumlah : "+ Jumlah_CCTV);
-		
-		System.out.println(AnalysisKondisiStopKontak());
-		System.out.println("Analysis Kondisi : "+ KondisiStopKontak);
-		System.out.println(AnalysisKondisiKabel_LCD());
-		System.out.println("Analysis Kondisi : "+ KondisiKabel_LCD);
-		System.out.println(AnalysisKondisiLampu());
-		System.out.println("Analysis Kondisi : "+ KondisiLampu);
-		System.out.println(AnalysisKondisiKipasAngin());
-		System.out.println("Analysis Kondisi : "+ KondisiKipasAngin);
-		System.out.println(AnalysisKondisi_CCTV());
-		System.out.println("Analysis Kondisi : "+ Kondisi_CCTV);
-		
-		System.out.println(AnalysisPosisiStopKontak());
-		System.out.println("Analysis Posisi : "+ PosisiStopKontak);
-		System.out.println(AnalysisPosisiKabel_LCD());
-		System.out.println("Analysis Posisi : "+ PosisiKabel_LCD);
-		System.out.println(AnalysisPosisiLampu());
-		System.out.println("Analysis Posisi : "+ PosisiLampu);
-		System.out.println(AnalysisPosisiKipasAngin());
-		System.out.println("Analysis Posisi : "+ PosisiKipasAngin);
-		System.out.println(AnalysisPosisi_CCTV());
-		System.out.println("Analysis Posisi : "+ Posisi_CCTV);
 	}
 
 	abstract boolean AnalysisJumlahStopKontak();

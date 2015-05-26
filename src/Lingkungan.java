@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Scanner;
 abstract public class Lingkungan implements LingkunganKelas{
 	
@@ -11,17 +14,23 @@ abstract public class Lingkungan implements LingkunganKelas{
 	
 	@Override
 	public void Print(){
+		try{
+			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+			System.setOut(out);
+			out.println("kondisi lantai: "+ Lantai);
+			out.println(AnalysisLantai());
+			out.println("kondisi dinding: "+ Dinding);
+			out.println(AnalysisDinding());
+			out.println("kondisi atap: "+ Atap);
+			out.println(AnalysisAtap());
+			out.println("kondisi pintu: "+ Pintu);
+			out.println(AnalysisPintu());
+			out.println("kondisi jendela: "+ Jendela);
+			out.println(AnalysisJendela());
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
 		
-		System.out.println("kondisi lantai: "+ Lantai);
-		System.out.println(AnalysisLantai());
-		System.out.println("kondisi dinding: "+ Dinding);
-		System.out.println(AnalysisDinding());
-		System.out.println("kondisi atap: "+ Atap);
-		System.out.println(AnalysisAtap());
-		System.out.println("kondisi pintu: "+ Pintu);
-		System.out.println(AnalysisPintu());
-		System.out.println("kondisi jendela: "+ Jendela);
-		System.out.println(AnalysisJendela());
 		
 	}
 
