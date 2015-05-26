@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 abstract public class Keamanan implements KeamananKelas {
 
 	String Kekokohan;
@@ -8,16 +9,22 @@ abstract public class Keamanan implements KeamananKelas {
 	
 	Scanner scan = new Scanner(System.in);
 	
+	
 	public void Print(){
-		
-		System.out.println("Kekokohan : "+ Kekokohan);
-		System.out.println(AnalysisKekokohan());
-		System.out.println("Kunci Pintu : "+ KunciPintu);
-		System.out.println(AnalysisKunciPintu());
-		System.out.println("Kunci Jendela : "+ KunciJendela);
-		System.out.println(AnalysisKunciJendela());
-		System.out.println("Bahaya : "+ Bahaya);
-		System.out.println(AnalysisBahaya());
+		try{
+			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+			System.setOut(out);
+			out.println("Kekokohan : "+ Kekokohan);
+			out.println(AnalysisKekokohan());
+			out.println("Kunci Pintu : "+ KunciPintu);
+			out.println(AnalysisKunciPintu());
+			out.println("Kunci Jendela : "+ KunciJendela);
+			out.println(AnalysisKunciJendela());
+			out.println("Bahaya : "+ Bahaya);
+			out.println(AnalysisBahaya());
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
 		
 	}
 
