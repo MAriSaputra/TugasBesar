@@ -2,7 +2,7 @@
 public class AnalysisKeamanan extends Keamanan {
 	public void data(){
 		Insert(); 
-		Print();
+	
 		
 	}
 	
@@ -41,7 +41,7 @@ public class AnalysisKeamanan extends Keamanan {
 
 	@Override
 	String AnalysisBahaya() {
-		 if(Bahaya.equals("tidak_ada")){
+		 if(Bahaya.equals("tidakada")){
 			 return "Sudah Sesuai Standard ";
 	      }
 		  else {

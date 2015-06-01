@@ -2,7 +2,7 @@
 public class AnalysisKebersihan extends Kebersihan{
 	public void data(){
 		Insert(); 
-		Print();
+		
 	}
 	@Override
 	String AnalysisSirkulasiUdara() {

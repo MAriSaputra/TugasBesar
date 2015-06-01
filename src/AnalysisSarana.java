@@ -2,11 +2,8 @@
 public class AnalysisSarana extends Sarana{
 	public void data(){
 		Insert(); 
-		Print();
 		
-	}
-
-	
+	}	
 
 	@Override
 	boolean AnalysisJumlahStopKontak() {

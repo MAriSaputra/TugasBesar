@@ -2,7 +2,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
-abstract public class Kenyamanan implements KenyamananKelas{
+abstract public class Kenyamanan implements Kelas{
 
 		String Kebisingan = "Tidak Bising";
 		String Bau = "Tidak Bau";
@@ -35,24 +35,7 @@ abstract public class Kenyamanan implements KenyamananKelas{
 		abstract String AnalysisKerusakan();
 		abstract String AnalysisKeausan();
 
-		@Override
-		public void Print() {
-			try{
-				PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
-				System.setOut(out);
-				out.println("kebisingan: "+ Kebisingan);
-				out.println(AnalysisKebisingan());
-				out.println("bau: "+ Bau);
-				out.println(AnalysisBau());
-				out.println("kebocoran: "+ Kebocoran);
-				out.println(AnalysisKebocoran());
-				out.println("kerusakan: "+ Kerusakan);
-				out.println(AnalysisKerusakan());
-				out.println("keausan: "+ Keausan);
-				out.println(AnalysisKeausan());
-				}catch(IOException ex){
-				ex.printStackTrace();
-			}
+		
 			
 			
 		}
@@ -60,4 +43,4 @@ abstract public class Kenyamanan implements KenyamananKelas{
 		
 		
 		
-}
+

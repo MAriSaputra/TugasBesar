@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.io.*;
-abstract public class Keamanan implements KeamananKelas {
+abstract public class Keamanan implements Kelas {
 
 	String Kekokohan;
 	String KunciPintu;
@@ -8,25 +8,6 @@ abstract public class Keamanan implements KeamananKelas {
 	String Bahaya;
 	
 	Scanner scan = new Scanner(System.in);
-	
-	
-	public void Print(){
-		try{
-			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
-			System.setOut(out);
-			out.println("Kekokohan : "+ Kekokohan);
-			out.println(AnalysisKekokohan());
-			out.println("Kunci Pintu : "+ KunciPintu);
-			out.println(AnalysisKunciPintu());
-			out.println("Kunci Jendela : "+ KunciJendela);
-			out.println(AnalysisKunciJendela());
-			out.println("Bahaya : "+ Bahaya);
-			out.println(AnalysisBahaya());
-		}catch(IOException ex){
-			ex.printStackTrace();
-		}
-		
-	}
 
 	abstract String AnalysisKekokohan(); 
 	abstract String AnalysisKunciPintu();

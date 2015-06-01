@@ -2,7 +2,6 @@
 public class AnalysisKenyamanan extends Kenyamanan {
 	public void data(){
 		Insert(); 
-		Print();
 		
 	}
 	@Override

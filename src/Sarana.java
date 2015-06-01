@@ -2,7 +2,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
-abstract public class Sarana implements SaranaKelas{
+abstract public class Sarana implements Kelas{
 	
 	int JumlahStopKontak,Jumlah_AC,JumlahKabel_LCD,JumlahKipasAngin,Jumlah_CCTV,JumlahLampu;
 	String KondisiStopKontak,Kondisi_AC,KondisiKabel_LCD,KondisiKipasAngin,Kondisi_CCTV,KondisiLampu;
@@ -53,48 +53,8 @@ abstract public class Sarana implements SaranaKelas{
 		
 	}
 	
-	@Override
-	public void Print() {
-		try{
-			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
-			System.setOut(out);
-			out.println(AnalysisJumlahStopKontak());
-			out.println("Analysis Jumlah : "+ JumlahStopKontak);
-			out.println(AnalysisJumlahKabel_LCD());
-			out.println("Analysis Jumlah : "+ JumlahKabel_LCD);
-			out.println(AnalysisJumlahLampu());
-			out.println("Analysis Jumlah : "+ JumlahLampu);
-			out.println(AnalysisJumlahKipasAngin());
-			out.println("Analysis Jumlah : "+ JumlahKipasAngin);
-			out.println(AnalysisJumlah_CCTV());
-			out.println("Analysis Jumlah : "+ Jumlah_CCTV);
-			
-			out.println(AnalysisKondisiStopKontak());
-			out.println("Analysis Kondisi : "+ KondisiStopKontak);
-			out.println(AnalysisKondisiKabel_LCD());
-			out.println("Analysis Kondisi : "+ KondisiKabel_LCD);
-			out.println(AnalysisKondisiLampu());
-			out.println("Analysis Kondisi : "+ KondisiLampu);
-			out.println(AnalysisKondisiKipasAngin());
-			out.println("Analysis Kondisi : "+ KondisiKipasAngin);
-			out.println(AnalysisKondisi_CCTV());
-			out.println("Analysis Kondisi : "+ Kondisi_CCTV);
-			
-			out.println(AnalysisPosisiStopKontak());
-			out.println("Analysis Posisi : "+ PosisiStopKontak);
-			out.println(AnalysisPosisiKabel_LCD());
-			out.println("Analysis Posisi : "+ PosisiKabel_LCD);
-			out.println(AnalysisPosisiLampu());
-			out.println("Analysis Posisi : "+ PosisiLampu);
-			out.println(AnalysisPosisiKipasAngin());
-			out.println("Analysis Posisi : "+ PosisiKipasAngin);
-			out.println(AnalysisPosisi_CCTV());
-			out.println("Analysis Posisi : "+ Posisi_CCTV);
-		}catch(IOException ex){
-			ex.printStackTrace();
-		}
-		
-	}
+	
+	
 
 	abstract boolean AnalysisJumlahStopKontak();
 	abstract String AnalysisKondisiStopKontak();

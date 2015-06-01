@@ -40,19 +40,5 @@ public class Kondisi {
 		return RasioLuas;
 	}
 	
-	public void Print(){
-		try{
-			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
-			System.setOut(out);
-			out.println("Panjang : "+ PanjangRuang);
-			out.println("Lebar : "+ LebarRuang);
-			out.println("Jumlah kursi : "+ JumlahKursi);
-			out.println("Jumlah pintu : "+ JumlahPintu);
-			out.println("Jumlah jendela : "+ JumlahJendela);
-			out.println("Luas Ruang : "+ LuasRuang);
-			out.println("Rasio Luas : "+ RasioLuas);
-			}catch(IOException ex){
-			ex.printStackTrace();
-			}
-	}
+	
 }

@@ -2,7 +2,7 @@
 public class AnalysisLingkungan extends Lingkungan{
 	public void data(){
 		Insert(); 
-		Print();
+		
 		
 	}
 	@Override
