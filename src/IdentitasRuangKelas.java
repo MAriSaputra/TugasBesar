@@ -2,7 +2,8 @@
 public class IdentitasRuangKelas {	
 	private String NamaRuang;
 	private String LokasiRuang;
-	private String ProgramStudi_Fakultas;
+	private String Jurusan;
+	private String Fakultas;
 	
 	void setNamaRuang (String Ruang){
 		this.NamaRuang = Ruang;
@@ -16,11 +17,16 @@ public class IdentitasRuangKelas {
 	String getLokasiRuang(){
 		return this.LokasiRuang;
 	}
-	void setProgramStudi_Fakultas (String Jurusan){
-		this.ProgramStudi_Fakultas = Jurusan;
+	void setJurusan (String Jurusan){
+		this.Jurusan = Jurusan;
 	}
-	String getProgramStudi_Fakultas(){
-		return this.ProgramStudi_Fakultas;
+	String getJurusan(){
+		return this.Jurusan;
 	}
-
+	void setFakultas (String Fakultas){
+		this.Fakultas = Fakultas;
+	}
+	String getFakultas(){
+		return this.Fakultas;
+	}
 }
