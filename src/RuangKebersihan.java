@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -123,9 +124,24 @@ public class RuangKebersihan extends JFrame {
 				kebersihan.setNilaiPencahayaan(Integer.parseInt(NilaiPencahayaan.getText()));
 				kebersihan.setKelembapan(Integer.parseInt(Kelembapan.getText()));
 				kebersihan.setSuhu(Integer.parseInt(Suhu.getText()));
+				SaveLoad.simpankebersihan(kebersihan);
 			}
 		});
-		btnSave.setBounds(133, 131, 130, 40);
+		btnSave.setBounds(133, 131, 66, 40);
 		contentPane.add(btnSave);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				KebersihanRuangKelas kebersihan = SaveLoad.bacakebersihan();
+				SirkulasiUdara.setText(kebersihan.getSirkualasiUdara());
+				NilaiPencahayaan.setText(" "+kebersihan.getNilaiPencahayaan());
+				Kelembapan.setText(" "+kebersihan.getKelembapan());
+				Suhu.setText(" "+kebersihan.getSuhu());
+				
+			}
+		});
+		btnLoad.setBounds(203, 131, 66, 40);
+		contentPane.add(btnLoad);
 	}
 }

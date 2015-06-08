@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -102,7 +103,7 @@ public class RuangKondisi extends JFrame {
 				dispose();
 			}
 		});
-		btnNext.setBounds(206, 253, 69, 23);
+		btnNext.setBounds(274, 231, 69, 23);
 		contentPane.add(btnNext);
 		
 		JButton btnPrevious = new JButton("Previous");
@@ -112,15 +113,15 @@ public class RuangKondisi extends JFrame {
 				dispose();
 			}
 		});
-		btnPrevious.setBounds(10, 253, 76, 23);
+		btnPrevious.setBounds(186, 231, 76, 23);
 		contentPane.add(btnPrevious);
 		
 		JLabel lblRasioLuas = new JLabel("Rasio Luas");
-		lblRasioLuas.setBounds(201, 44, 105, 14);
+		lblRasioLuas.setBounds(7, 200, 89, 14);
 		contentPane.add(lblRasioLuas);
 		
 		JLabel lblLuasRuang = new JLabel("Luas Ruang");
-		lblLuasRuang.setBounds(199, 79, 76, 14);
+		lblLuasRuang.setBounds(10, 225, 76, 14);
 		contentPane.add(lblLuasRuang);
 		
 		Rasio = new JTextField();
@@ -129,17 +130,27 @@ public class RuangKondisi extends JFrame {
 				
 			}
 		});
-		Rasio.setBounds(271, 41, 48, 20);
+		Rasio.setBounds(98, 197, 48, 20);
 		contentPane.add(Rasio);
 		Rasio.setColumns(10);
 		
 		Luas = new JTextField();
 		Luas.setColumns(10);
-		Luas.setBounds(271, 76, 48, 20);
+		Luas.setBounds(98, 222, 48, 20);
 		contentPane.add(Luas);
 		
 		JButton btnHitung = new JButton("Hitung");
-		btnHitung.setBounds(232, 129, 89, 23);
+		btnHitung.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double a = kondisi.LuasRuang(kondisi.getPanjangRuang(), + kondisi.getLebarRuang());
+				double b = kondisi.RasioLuas(kondisi.LuasRuang(kondisi.getPanjangRuang(), kondisi.getLebarRuang()), kondisi.getJumlahKursi());
+				
+				Rasio.setText(" "+a);
+				Luas.setText(" "+b);
+				
+			}
+		});
+		btnHitung.setBounds(10, 250, 89, 23);
 		contentPane.add(btnHitung);
 		
 		JButton btnSave = new JButton("Save");
@@ -150,9 +161,25 @@ public class RuangKondisi extends JFrame {
 				kondisi.setJumlahKursi(Integer.parseInt(Kursi.getText()));
 				kondisi.setJumlahJendela(Integer.parseInt(Jendela.getText()));
 				kondisi.setJumlahPintu(Integer.parseInt(Pintu.getText()));
+				SaveLoad.simpankondisi(kondisi);
 			}
 		});
-		btnSave.setBounds(10, 195, 95, 35);
+		btnSave.setBounds(239, 34, 69, 35);
 		contentPane.add(btnSave);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				KondisiRuangKelas kondisi= SaveLoad.bacakondisi();
+				Panjang.setText(" "+kondisi.getPanjangRuang());
+				Lebar.setText(" "+kondisi.getLebarRuang());
+				Kursi.setText(" "+kondisi.getJumlahKursi());
+				Pintu.setText(" "+kondisi.getJumlahPintu());
+				Jendela.setText(" "+kondisi.getJumlahJendela());
+				
+			}
+		});
+		btnLoad.setBounds(239, 80, 69, 35);
+		contentPane.add(btnLoad);
 	}
 }

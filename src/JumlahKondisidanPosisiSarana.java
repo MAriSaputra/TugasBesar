@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class JumlahKondisidanPosisiSarana {
+
+public class JumlahKondisidanPosisiSarana implements Serializable {
 	 	private int JumlahStopKontak;
 	    private String KondisiStopKontak;
 	    private String PosisiStopKontak;
@@ -21,7 +23,6 @@ public class JumlahKondisidanPosisiSarana {
 	    private String Posisi_AC;
 	    
 	    private String SSID;
-	    private String Login;
 	    private int Bandwidth;
 	   	
 	    private int Jumlah_CCTV;
@@ -107,12 +108,7 @@ public class JumlahKondisidanPosisiSarana {
 	    String getSSID(){
 	        return this.SSID;
 	    }
-	   void setLogin(String Login){
-		   this.Login = Login;
-	   }
-	   String getLogin(){
-		   return this.Login;
-	   }
+	 
 	    void setBandwidth(int Bandwidth){
 	        this.Bandwidth = Bandwidth;
 	    }

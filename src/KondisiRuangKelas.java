@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class KondisiRuangKelas {
+
+public class KondisiRuangKelas implements Serializable {
 	private double PanjangRuang;
 	private double LebarRuang;
 	private int JumlahKursi;
@@ -48,11 +50,13 @@ public class KondisiRuangKelas {
         return this.JumlahJendela;
     }
     
-    double LuasRuang(){
-        return PanjangRuang*LebarRuang;
+    double LuasRuang(double PanjangRuang, double LebarRuang){
+    	LuasRuang = PanjangRuang * LebarRuang;
+        return LuasRuang;
     }
     
-    double RasioLuas(){
-        return LuasRuang()/JumlahKursi;
+    double RasioLuas(double LuasRuang, int JumlahKursi){
+    	RasioLuas = LuasRuang(getPanjangRuang(), getLebarRuang()) / JumlahKursi; 
+        return RasioLuas;
     }
 }

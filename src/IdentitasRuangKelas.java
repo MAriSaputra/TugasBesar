@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class IdentitasRuangKelas {	
+
+public class IdentitasRuangKelas implements Serializable {	
 	private String NamaRuang;
 	private String LokasiRuang;
 	private String Jurusan;

@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -76,7 +77,7 @@ public class RuangKenyamanan extends JFrame {
 				dispose();
 			}
 		});
-		btnNext.setBounds(268, 189, 89, 23);
+		btnNext.setBounds(285, 189, 89, 23);
 		contentPane.add(btnNext);
 		
 		JButton btnPrevious = new JButton("Previous");
@@ -86,7 +87,7 @@ public class RuangKenyamanan extends JFrame {
 				dispose();
 			}
 		});
-		btnPrevious.setBounds(35, 189, 89, 23);
+		btnPrevious.setBounds(10, 189, 89, 23);
 		contentPane.add(btnPrevious);
 		
 		Bising = new JTextField();
@@ -142,10 +143,26 @@ public class RuangKenyamanan extends JFrame {
 				kenyamanan.setKebocoran(Bocor.getText());
 				kenyamanan.setKerusakan(Rusak.getText());
 				kenyamanan.setKeausan(Aus.getText());
+				SaveLoad.simpankenyamanan(kenyamanan);
 			}
 		});
-		btnSave.setBounds(143, 183, 98, 34);
+		btnSave.setBounds(116, 183, 70, 34);
 		contentPane.add(btnSave);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				KenyamananRuangKelas kenyamanan = SaveLoad.bacakenyamanan();
+				Bising.setText(kenyamanan.getKebisingan());
+				Bau.setText(kenyamanan.getBau());
+				Bocor.setText(kenyamanan.getKebocoran());
+				Rusak.setText(kenyamanan.getKerusakan());
+				Aus.setText(kenyamanan.getKeausan());
+				
+			}
+		});
+		btnLoad.setBounds(210, 183, 65, 34);
+		contentPane.add(btnLoad);
 	}
 
 }

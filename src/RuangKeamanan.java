@@ -7,8 +7,10 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.JTextField;
 
 
@@ -81,6 +83,7 @@ public class RuangKeamanan extends JFrame {
 				keamanan.setKunciPintu(KunciPintu.getText());
 				keamanan.setKunciJendela(KunciJendela.getText());
 				keamanan.setBahaya(Bahaya.getText());
+				SaveLoad.simpankeamanan(keamanan);
 			}
 		});
 		btnFinish.setBounds(280, 168, 89, 23);
@@ -121,6 +124,19 @@ public class RuangKeamanan extends JFrame {
 		JLabel label_1 = new JLabel("Ada/Tidak Ada");
 		label_1.setBounds(246, 129, 97, 14);
 		contentPane.add(label_1);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				KeamananRuangKelas keamanan = SaveLoad.bacakeamanan();
+				Kokoh.setText(keamanan.getKekokohan());
+				KunciPintu.setText(keamanan.getKunciPintu());
+				KunciJendela.setText(keamanan.getKunciJendela());
+				Bahaya.setText(keamanan.getBahaya());
+			}
+		});
+		btnLoad.setBounds(149, 168, 89, 23);
+		contentPane.add(btnLoad);
 	}
 
 }

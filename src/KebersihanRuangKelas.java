@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class KebersihanRuangKelas {
+
+public class KebersihanRuangKelas implements Serializable {
 	private String SirkulasiUdara;
 	private int NilaiPencahayaan;
 	private int Kelembapan;

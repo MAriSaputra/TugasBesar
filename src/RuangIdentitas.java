@@ -112,11 +112,24 @@ public class RuangIdentitas extends JFrame {
 				identitas.setLokasiRuang(TextLokasiRuang.getText());
 				identitas.setFakultas(TextFakultas.getText());
 				identitas.setJurusan(TextJurusan.getText());
-				
+				SaveLoad.simpanidentitas(identitas);
 			}
 		});
-		btnSave.setBounds(20, 135, 130, 32);
+		btnSave.setBounds(20, 135, 69, 32);
 		contentPane.add(btnSave);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				IdentitasRuangKelas identitas= SaveLoad.bacaidentitas();
+				TextNamaRuang.setText(identitas.getNamaRuang());
+				TextLokasiRuang.setText(identitas.getLokasiRuang());
+				TextFakultas.setText(identitas.getFakultas());
+				TextJurusan.setText(identitas.getJurusan());
+			}
+		});
+		btnLoad.setBounds(99, 135, 69, 32);
+		contentPane.add(btnLoad);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

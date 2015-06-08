@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -100,7 +101,7 @@ public class RuangLingkungan extends JFrame {
 				dispose();
 			}
 		});
-		btnNext.setBounds(240, 148, 89, 23);
+		btnNext.setBounds(274, 148, 89, 23);
 		contentPane.add(btnNext);
 		
 		JButton btnPrevious = new JButton("Previous");
@@ -141,10 +142,25 @@ public class RuangLingkungan extends JFrame {
 				lingkungan.setKondisiAtap(Atap.getText());
 				lingkungan.setKondisiJendela(Jendela.getText());
 				lingkungan.setKondisiPintu(Pintu.getText());
+				SaveLoad.simpanlingkungan(lingkungan);
 			}
 		});
-		btnSave.setBounds(118, 144, 102, 41);
+		btnSave.setBounds(118, 144, 66, 41);
 		contentPane.add(btnSave);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			LingkunganRuangKelas lingkungan = SaveLoad.bacalingkungan();
+			Lantai.setText(lingkungan.getKondisiLantai());
+			Dinding.setText(lingkungan.getKondisiDinding());
+			Atap.setText(lingkungan.getKondisiAtap());
+			Jendela.setText(lingkungan.getKondisiJendela());
+			Pintu.setText(lingkungan.getKondisiPintu());
+			}
+		});
+		btnLoad.setBounds(194, 144, 66, 41);
+		contentPane.add(btnLoad);
 	}
 
 }

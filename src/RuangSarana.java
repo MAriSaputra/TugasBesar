@@ -10,6 +10,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -284,10 +285,11 @@ public class RuangSarana extends JFrame {
 				sarana.setPosisiStopKontak(PosisiStopKontak.getText());
 				sarana.setBandwidth(Integer.parseInt(Bandwidth.getText()));
 				sarana.setSSID(SSID.getText());
+				SaveLoad.simpansarana(sarana);
 				
 			}
 		});
-		btnSave.setBounds(269, 461, 105, 32);
+		btnSave.setBounds(215, 461, 105, 32);
 		contentPane.add(btnSave);
 		
 		JLabel lblDataKipasAngin = new JLabel("DATA KIPAS ANGIN");
@@ -354,5 +356,35 @@ public class RuangSarana extends JFrame {
 		JLabel lblNoBandwithHotspot = new JLabel("No. Bandwith Hotspot UMM/Lainnya");
 		lblNoBandwithHotspot.setBounds(422, 391, 223, 14);
 		contentPane.add(lblNoBandwithHotspot);
+		
+		JButton btnLoad = new JButton("Load");
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JumlahKondisidanPosisiSarana sarana = SaveLoad.bacasarana();
+				JumlahStopKontak.setText(" "+sarana.getJumlahStopKontak());
+				JumlahKabelLCD.setText(" "+sarana.getJumlahKabel_LCD());
+				JumlahLampu.setText(" "+sarana.getJumlahLampu());
+				JumlahAC.setText(" "+sarana.getJumlah_AC());
+				JumlahCCTV.setText(" "+sarana.getJumlah_CCTV());				
+				JumlahKipasAngin.setText(" "+sarana.getJumlahKipasAngin());
+				Bandwidth.setText(" "+sarana.getBandwidth());
+				SSID.setText(sarana.getSSID());
+				KondisiStopKontak.setText(sarana.getKondisiStopKontak());
+				KondisiLampu.setText(sarana.getKondisiLampu());
+				KondisiKipasAngin.setText(sarana.getKondisiKipasAngin());
+				KondisiKabelLCD.setText(sarana.getKondisiKabel_LCD());
+				KondisiCCTV.setText(sarana.getKondisi_CCTV());
+				KondisiAC.setText(sarana.getKondisi_AC());
+				PosisiStopKontak.setText(sarana.getPosisiStopKontak());
+				PosisiLampu.setText(sarana.getPosisiLampu());
+				PosisiKipasAngin.setText(sarana.getPosisiKipasAngin());
+				PosisiKabelLCD.setText(sarana.getPosisiKabel_LCD());
+				PosisiCCTV.setText(sarana.getKondisi_CCTV());
+				PosisiAC.setText(sarana.getKondisi_AC());
+			
+			}
+		});
+		btnLoad.setBounds(330, 461, 105, 32);
+		contentPane.add(btnLoad);
 	}
 }

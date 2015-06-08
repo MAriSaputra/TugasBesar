@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class KeamananRuangKelas {
+
+public class KeamananRuangKelas implements Serializable{
 	private String Kekokohan;
 	private String KunciPintu;
 	private String KunciJendela;

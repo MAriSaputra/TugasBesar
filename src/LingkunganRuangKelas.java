@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class LingkunganRuangKelas {
+
+public class LingkunganRuangKelas implements Serializable{
 	private String KondisiLantai;
 	private String KondisiDinding;
 	private String KondisiAtap;
