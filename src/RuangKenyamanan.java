@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 
 
 public class RuangKenyamanan extends JFrame {
-
+	KenyamananRuangKelas kenyamanan = new KenyamananRuangKelas();
 	private JPanel contentPane;
 	private JTextField Bising;
 	private JTextField Bau;
@@ -76,7 +76,7 @@ public class RuangKenyamanan extends JFrame {
 				dispose();
 			}
 		});
-		btnNext.setBounds(253, 189, 89, 23);
+		btnNext.setBounds(268, 189, 89, 23);
 		contentPane.add(btnNext);
 		
 		JButton btnPrevious = new JButton("Previous");
@@ -133,6 +133,19 @@ public class RuangKenyamanan extends JFrame {
 		JLabel label_3 = new JLabel("Ya/Tidak");
 		label_3.setBounds(253, 150, 64, 14);
 		contentPane.add(label_3);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				kenyamanan.setKebisingan(Bising.getText());
+				kenyamanan.setBau(Bau.getText());
+				kenyamanan.setKebocoran(Bocor.getText());
+				kenyamanan.setKerusakan(Rusak.getText());
+				kenyamanan.setKeausan(Aus.getText());
+			}
+		});
+		btnSave.setBounds(143, 183, 98, 34);
+		contentPane.add(btnSave);
 	}
 
 }

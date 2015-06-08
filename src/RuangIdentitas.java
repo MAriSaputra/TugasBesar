@@ -32,6 +32,7 @@ public class RuangIdentitas extends JFrame {
 	private JTextField TextJurusan;
 	private JLabel lblNewLabel;
 	private JLabel lblJurusan;
+	private JButton btnSave;
 
 	/**
 	 * Launch the application.
@@ -103,14 +104,22 @@ public class RuangIdentitas extends JFrame {
 		JButton btnNext = new JButton("Next");
 		btnNext.setBounds(206, 147, 89, 23);
 		contentPane.add(btnNext);
-		btnNext.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
+		
+		btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
 				identitas.setNamaRuang(TextNamaRuang.getText());
 				identitas.setLokasiRuang(TextLokasiRuang.getText());
 				identitas.setFakultas(TextFakultas.getText());
 				identitas.setJurusan(TextJurusan.getText());
+				
+			}
+		});
+		btnSave.setBounds(20, 135, 130, 32);
+		contentPane.add(btnSave);
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
 				new RuangKondisi().setVisible(true);
 				dispose();
 				

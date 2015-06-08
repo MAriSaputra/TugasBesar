@@ -71,7 +71,7 @@ public class Login extends JFrame {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
-					File data = new File("LogIn.txt");
+					File data = new File("SignIn.txt");
 					FileReader read = new FileReader(data);
 					BufferedReader reader = new BufferedReader(read);
 					

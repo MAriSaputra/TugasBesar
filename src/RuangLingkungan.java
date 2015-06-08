@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 
 
 public class RuangLingkungan extends JFrame {
-
+	LingkunganRuangKelas lingkungan = new LingkunganRuangKelas();
 	private JPanel contentPane;
 	private JTextField Lantai;
 	private JTextField Dinding;
@@ -100,7 +100,7 @@ public class RuangLingkungan extends JFrame {
 				dispose();
 			}
 		});
-		btnNext.setBounds(223, 148, 89, 23);
+		btnNext.setBounds(240, 148, 89, 23);
 		contentPane.add(btnNext);
 		
 		JButton btnPrevious = new JButton("Previous");
@@ -132,6 +132,19 @@ public class RuangLingkungan extends JFrame {
 		JLabel label_3 = new JLabel("Bersih/Kotor");
 		label_3.setBounds(223, 111, 89, 14);
 		contentPane.add(label_3);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lingkungan.setKondisiLantai(Lantai.getText());
+				lingkungan.setKondisiDinding(Dinding.getText());
+				lingkungan.setKondisiAtap(Atap.getText());
+				lingkungan.setKondisiJendela(Jendela.getText());
+				lingkungan.setKondisiPintu(Pintu.getText());
+			}
+		});
+		btnSave.setBounds(118, 144, 102, 41);
+		contentPane.add(btnSave);
 	}
 
 }

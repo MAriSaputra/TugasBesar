@@ -13,12 +13,12 @@ import javax.swing.JTextField;
 
 
 public class RuangKeamanan extends JFrame {
-
+	KeamananRuangKelas keamanan = new KeamananRuangKelas();
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField Kokoh;
+	private JTextField KunciPintu;
+	private JTextField KunciJendela;
+	private JTextField Bahaya;
 
 	/**
 	 * Launch the application.
@@ -74,32 +74,40 @@ public class RuangKeamanan extends JFrame {
 		btnPrevious.setBounds(10, 168, 89, 23);
 		contentPane.add(btnPrevious);
 		
-		JButton btnNext = new JButton("Finish");
-		btnNext.setBounds(280, 168, 89, 23);
-		contentPane.add(btnNext);
+		JButton btnFinish = new JButton("Finish");
+		btnFinish.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				keamanan.setKekokohan(Kokoh.getText());
+				keamanan.setKunciPintu(KunciPintu.getText());
+				keamanan.setKunciJendela(KunciJendela.getText());
+				keamanan.setBahaya(Bahaya.getText());
+			}
+		});
+		btnFinish.setBounds(280, 168, 89, 23);
+		contentPane.add(btnFinish);
 		
-		textField = new JTextField();
-		textField.setBounds(108, 21, 128, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		Kokoh = new JTextField();
+		Kokoh.setBounds(108, 21, 128, 20);
+		contentPane.add(Kokoh);
+		Kokoh.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(108, 58, 128, 20);
-		contentPane.add(textField_1);
+		KunciPintu = new JTextField();
+		KunciPintu.setColumns(10);
+		KunciPintu.setBounds(108, 58, 128, 20);
+		contentPane.add(KunciPintu);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(108, 91, 128, 20);
-		contentPane.add(textField_2);
+		KunciJendela = new JTextField();
+		KunciJendela.setColumns(10);
+		KunciJendela.setBounds(108, 91, 128, 20);
+		contentPane.add(KunciJendela);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(108, 126, 128, 20);
-		contentPane.add(textField_3);
+		Bahaya = new JTextField();
+		Bahaya.setColumns(10);
+		Bahaya.setBounds(108, 126, 128, 20);
+		contentPane.add(Bahaya);
 		
 		JLabel lblKokohtidakKokoh = new JLabel("Kokoh/Tidak Kokoh");
-		lblKokohtidakKokoh.setBounds(250, 24, 133, 14);
+		lblKokohtidakKokoh.setBounds(246, 24, 133, 14);
 		contentPane.add(lblKokohtidakKokoh);
 		
 		JLabel lblAdatidakAda = new JLabel("Ada/Tidak Ada");

@@ -98,12 +98,6 @@ public class RuangKondisi extends JFrame {
 		JButton btnNext = new JButton("Next");
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				kondisi.setPanjangRuang(Double.parseDouble(Panjang.getText()));
-				kondisi.setLebarRuang(Double.parseDouble(Lebar.getText()));
-				kondisi.setJumlahKursi(Integer.parseInt(Kursi.getText()));
-				kondisi.setJumlahJendela(Integer.parseInt(Jendela.getText()));
-				kondisi.setJumlahPintu(Integer.parseInt(Pintu.getText()));
-				
 				new RuangSarana().setVisible(true);
 				dispose();
 			}
@@ -130,6 +124,11 @@ public class RuangKondisi extends JFrame {
 		contentPane.add(lblLuasRuang);
 		
 		Rasio = new JTextField();
+		Rasio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		Rasio.setBounds(271, 41, 48, 20);
 		contentPane.add(Rasio);
 		Rasio.setColumns(10);
@@ -142,5 +141,18 @@ public class RuangKondisi extends JFrame {
 		JButton btnHitung = new JButton("Hitung");
 		btnHitung.setBounds(232, 129, 89, 23);
 		contentPane.add(btnHitung);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				kondisi.setPanjangRuang(Double.parseDouble(Panjang.getText()));
+				kondisi.setLebarRuang(Double.parseDouble(Lebar.getText()));
+				kondisi.setJumlahKursi(Integer.parseInt(Kursi.getText()));
+				kondisi.setJumlahJendela(Integer.parseInt(Jendela.getText()));
+				kondisi.setJumlahPintu(Integer.parseInt(Pintu.getText()));
+			}
+		});
+		btnSave.setBounds(10, 195, 95, 35);
+		contentPane.add(btnSave);
 	}
 }

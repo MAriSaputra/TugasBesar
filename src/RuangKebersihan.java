@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 
 
 public class RuangKebersihan extends JFrame {
-
+	KebersihanRuangKelas kebersihan = new KebersihanRuangKelas();
 	private JPanel contentPane;
 	private JTextField NilaiPencahayaan;
 	private JTextField Kelembapan;
@@ -96,7 +96,7 @@ public class RuangKebersihan extends JFrame {
 				dispose();
 			}
 		});
-		btnPrevious.setBounds(100, 135, 89, 23);
+		btnPrevious.setBounds(10, 135, 89, 23);
 		contentPane.add(btnPrevious);
 		
 		JLabel label = new JLabel("%");
@@ -115,5 +115,17 @@ public class RuangKebersihan extends JFrame {
 		JLabel lblNewLabel = new JLabel("Lancar/Tidak Lancar");
 		lblNewLabel.setBounds(253, 21, 118, 14);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				kebersihan.setSirkulasiUdara(SirkulasiUdara.getText());
+				kebersihan.setNilaiPencahayaan(Integer.parseInt(NilaiPencahayaan.getText()));
+				kebersihan.setKelembapan(Integer.parseInt(Kelembapan.getText()));
+				kebersihan.setSuhu(Integer.parseInt(Suhu.getText()));
+			}
+		});
+		btnSave.setBounds(133, 131, 130, 40);
+		contentPane.add(btnSave);
 	}
 }
